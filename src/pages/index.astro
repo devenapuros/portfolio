@@ -2,10 +2,17 @@
 import MainLayout from "../layouts/mainLayout.astro";
 import Card from "../components/card.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
+import Topbar from "../components/Topbar.astro";
 ---
 
 <MainLayout title="Daniel Gómez - Desarrollador Frontend">
-    <h1>Astro</h1>
-    <Card />
-    <PrimaryButton />
+    <Topbar />
+    <div class="section">
+        <h1>Astro</h1>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <PrimaryButton />
+    </div>
 </MainLayout>

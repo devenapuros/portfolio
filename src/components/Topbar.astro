@@ -1,3 +1,28 @@
+---
+import Logo from "./logo.astro";
+import Menu from "./menu.astro";
+---
+
+<style>
+    nav {
+        position: sticky;
+        top: 0;
+        backdrop-filter: saturate(10%) blur(20px);
+        border-bottom: 1px solid var(--hover);
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        width: 866px;
+        margin: 0 auto;
+    }
+</style>
+
 <nav>
-    <span>Daniel Gomez</span>
+    <div class="nav-container">
+        <Logo />
+        <Menu />
+    </div>
 </nav>

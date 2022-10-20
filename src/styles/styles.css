@@ -1,40 +1,50 @@
-@font-face {
-    font-family: "Raleway";
-    src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf")
-        format("truetype");
-}
-
 :root {
     --background: #fff;
     --background_2: #fefefe;
-    --text-color: black;
+    --text: black;
+    --text_2: #333;
+    --gray: #757575;
     --hover: #00000018;
+    --primary: #ffb200;
+    --primary_2: #ea5c2b;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body.dark {
-    --background: #111;
-    --background_2: #191919;
-    --text-color: white;
-    --hover: #ffffff18;
+    --background: #040404;
+    --background_2: #141414;
+    --text: white;
+    --text_2: #ddd;
+    --gray: #999;
+    --hover: #ffffff15;
+    --primary: #ffb200;
+    --primary_2: #ffb200;
 }
 
 body {
     background-color: var(--background);
     color: var(--text-color);
-    width: 800px;
-    margin: 0 auto;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Poppins", sans-serif;
-    /* font-weight: 600; */
+    font-weight: 800;
+    color: var(--text);
+}
+
+p {
+    color: var(--text_2);
+    font-size: 0.9rem;
+}
+
+.section {
+    width: 866px;
+    margin: 0 auto;
 }
