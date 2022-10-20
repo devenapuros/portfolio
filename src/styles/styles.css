@@ -4,9 +4,10 @@
     --text: black;
     --text_2: #333;
     --gray: #757575;
-    --hover: #00000018;
+    --hover: #00000015;
     --primary: #ffb200;
     --primary_2: #ea5c2b;
+    --glass: #ffffff88;
 }
 
 * {
@@ -18,18 +19,18 @@
 
 body.dark {
     --background: #040404;
-    --background_2: #141414;
+    --background_2: #060606;
     --text: white;
     --text_2: #ddd;
     --gray: #999;
     --hover: #ffffff15;
     --primary: #ffb200;
     --primary_2: #ffb200;
+    --glass: #04040488;
 }
 
 body {
     background-color: var(--background);
-    color: var(--text-color);
 }
 
 h1,

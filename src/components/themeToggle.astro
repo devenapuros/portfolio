@@ -22,14 +22,14 @@ import MoonIcon from "../icons/MoonIcon.astro";
 
     .moon {
         stroke: var(--text);
-    }
-    
-    .sun {
         display: none;
+    }
+
+    .sun {
         stroke: var(--primary);
     }
 </style>
-<button>
+<button id="theme-toggle">
     <svg
         class="moon"
         xmlns="http://www.w3.org/2000/svg"
@@ -62,3 +62,11 @@ import MoonIcon from "../icons/MoonIcon.astro";
         ></path>
     </svg>
 </button>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("theme-toggle");
+        button.addEventListener("click", (event) => {
+            document.body.classList.toggle("dark");
+        });
+    });
+</script>
