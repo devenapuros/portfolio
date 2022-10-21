@@ -44,8 +44,3 @@ p {
     color: var(--text_2);
     font-size: 0.9rem;
 }
-
-.section {
-    width: 866px;
-    margin: 0 auto;
-}

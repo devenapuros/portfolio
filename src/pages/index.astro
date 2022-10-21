@@ -3,16 +3,16 @@ import MainLayout from "../layouts/mainLayout.astro";
 import Card from "../components/card.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
 import Topbar from "../components/Topbar.astro";
+import HomeSection from "../sections/homeSection.astro";
+import Main from "../components/main.astro";
 ---
 
 <MainLayout title="Daniel Gómez - Desarrollador Frontend">
     <Topbar />
-    <div class="section">
-        <h1>Astro</h1>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <PrimaryButton />
-    </div>
+    <Main>
+        <HomeSection />
+        <HomeSection />
+        <HomeSection />
+        <HomeSection />
+    </Main>
 </MainLayout>

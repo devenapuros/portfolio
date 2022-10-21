@@ -14,7 +14,7 @@ import Menu from "./menu.astro";
     .bordered {
         border-bottom: 1px solid var(--hover);
     }
-    
+
     .nav-container {
         display: flex;
         justify-content: space-between;
@@ -25,9 +25,16 @@ import Menu from "./menu.astro";
     }
 </style>
 
-<nav class="bordered">
+<nav id="topbar">
     <div class="nav-container">
         <Logo />
         <Menu />
     </div>
 </nav>
+<script>
+    const topbar = document.getElementById("topbar");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY >= 100) topbar.classList.add("bordered");
+        else topbar.classList.remove("bordered");
+    });
+</script>

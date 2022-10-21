@@ -21,12 +21,20 @@ import MoonIcon from "../icons/MoonIcon.astro";
     }
 
     .moon {
-        stroke: var(--text);
-        display: none;
+        stroke: var(--text_2);
     }
 
     .sun {
         stroke: var(--primary);
+        display: none;
+    }
+
+    body.dark .moon {
+        display: none;
+    }
+
+    body.dark .sun {
+        display: block;
     }
 </style>
 <button id="theme-toggle">
@@ -36,8 +44,8 @@ import MoonIcon from "../icons/MoonIcon.astro";
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
-        width="21"
-        height="21"
+        width="20"
+        height="20"
     >
         <path
             stroke-linecap="round"
@@ -64,8 +72,8 @@ import MoonIcon from "../icons/MoonIcon.astro";
 </button>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const button = document.getElementById("theme-toggle");
-        button.addEventListener("click", (event) => {
+        const toggleButton = document.getElementById("theme-toggle");
+        toggleButton.addEventListener("click", (event) => {
             document.body.classList.toggle("dark");
         });
     });

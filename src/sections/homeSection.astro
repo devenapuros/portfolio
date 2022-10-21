@@ -1,0 +1,57 @@
+---
+import PrimaryButton from "../components/PrimaryButton.astro";
+---
+
+<style>
+    section {
+        height: calc(100vh - 5rem);
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name h1 {
+        font-size: 5.5rem;
+    }
+
+    .name span {
+        font-size: 1.65rem;
+        font-weight: 600;
+        color: var(--gray);
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: var(--text_2);
+    }
+</style>
+<section>
+    <div class="name">
+        <h1>Daniel Gómez</h1>
+        <span>Desarrollador Frontend Junior</span>
+    </div>
+    <ul>
+        <li>2 años de<br />experiencia</li>
+        <li>
+            <img src="/location.svg" alt="" height="64px" />Edomex <br /> Mexico
+        </li>
+        <li>de pasión <br />incluida</li>
+    </ul>
+    <PrimaryButton>Contactar</PrimaryButton>
+</section>
