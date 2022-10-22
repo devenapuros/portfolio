@@ -18,7 +18,7 @@
 }
 
 body.dark {
-    --background: #040404;
+    --background: #090909;
     --background_2: #060606;
     --text: white;
     --text_2: #ddd;
@@ -26,7 +26,7 @@ body.dark {
     --hover: #ffffff15;
     --primary: #ffb200;
     --primary_2: #ffb200;
-    --glass: #040404aa;
+    --glass: #090909aa;
 }
 
 body {
