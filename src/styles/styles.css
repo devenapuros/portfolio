@@ -6,8 +6,9 @@
     --gray: #666;
     --hover: #00000015;
     --primary: #ffb200;
+    --secondary: #000000;
     --primary_2: #ea5c2b;
-    --glass: #ffffffaa;
+    --glass: #ffffff99;
 }
 
 * {
@@ -18,15 +19,16 @@
 }
 
 body.dark {
-    --background: #090909;
+    --background: #111;
     --background_2: #060606;
     --text: white;
     --text_2: #ddd;
     --gray: #999;
     --hover: #ffffff15;
     --primary: #ffb200;
+    --secondary: #ffffff;
     --primary_2: #ffb200;
-    --glass: #090909aa;
+    --glass: #11111199;
 }
 
 body {
@@ -43,4 +45,39 @@ h3 {
 p {
     color: var(--text_2);
     font-size: 0.9rem;
+}
+
+.btn {
+    padding: 1rem 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    border: 0;
+    outline: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.93rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    color: #000;
+}
+
+.primary-btn svg {
+    stroke: #000;
+}
+
+.secondary-btn {
+    background-color: var(--secondary);
+    color: var(--background);
+}
+
+.secondary-btn svg {
+    stroke: var(--background);
 }
