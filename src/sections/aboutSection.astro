@@ -1,0 +1,74 @@
+<style>
+    section {
+        padding: 3rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    article {
+        display: flex;
+        gap: 2rem;
+    }
+
+    article .data {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    article .data .secondary-btn {
+        width: fit-content;
+        text-decoration: none;
+        margin-top: 1.5rem;
+    }
+
+    article .profile-photo {
+        border-radius: 100%;
+    }
+</style>
+<!--TODO: Center al entire text with the image in section -->
+<section>
+    <h1>Sobre mi</h1>
+    <article>
+        <div class="data">
+            <p>
+                Desde 2020, me dedico a desarrollar y colaborar en proyectos de
+                software.
+            </p>
+            <p>
+                Alegre y optimista, amante de la optimización y la
+                productividad. Me gusta trabajar en equipos que comparten pasión
+                y entusiasmo, que promueven el crecimiento profesional de sus
+                integrantes, que brindan ayuda mutua, y que con su trabajo,
+                buscan generar un impacto que se refleje en productos y/o
+                servicios.
+            </p>
+            <a href="#pdf" class="btn secondary-btn">
+                Descargar CV
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    height="27"
+                    width="27"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                    ></path>
+                </svg>
+            </a>
+        </div>
+        <img
+            class="profile-photo"
+            src="/photo.jpg"
+            alt="Daniel Gomez - Desarrollador Frontend"
+            height="230px"
+            width="230px"
+            loading="lazy"
+        />
+    </article>
+</section>
