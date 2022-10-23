@@ -1,0 +1,38 @@
+---
+import Card from "./Card.astro";
+import Divider from "./Divider.astro";
+---
+
+<style>
+    .card-picture,
+    .card-data {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card-picture {
+        width: 280px;
+    }
+</style>
+<Card>
+    <div class="card-picture">
+        <img src="/photo.jpg" alt="" />
+    </div>
+    <Divider />
+    <div class="card-data">
+        <h1 class="job-title">Desarrollador Full Stack</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+            beatae. Similique, laudantium excepturi illum nisi iure repellendus,
+            nesciunt dolorem, odio tempora harum tenetur accusantium ea
+            explicabo quasi accusamus repudiandae natus?
+        </p>
+        <ul>
+            <li>Lista uno dos tres</li>
+            <li>Lista uno dos tres</li>
+            <li>Lista uno dos tres</li>
+            <li>Lista uno dos tres</li>
+        </ul>
+    </div>
+</Card>

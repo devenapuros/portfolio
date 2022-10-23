@@ -1,6 +1,5 @@
 :root {
     --background: #fff;
-    --background_2: #fefefe;
     --text: black;
     --text_2: #333;
     --gray: #666;
@@ -20,7 +19,6 @@
 
 body.dark {
     --background: #111;
-    --background_2: #111;
     --text: white;
     --text_2: #ddd;
     --gray: #999;

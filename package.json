@@ -12,5 +12,9 @@
   },
   "dependencies": {
     "astro": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-plugin-astro": "^0.20.0"
   }
 }
