@@ -8,7 +8,7 @@ import Menu from "./menu.astro";
         position: sticky;
         top: 0;
         background-color: var(--glass);
-        backdrop-filter: blur(18px);
+        backdrop-filter: blur(15px);
     }
 
     .bordered {
@@ -34,7 +34,7 @@ import Menu from "./menu.astro";
 <script>
     const topbar = document.getElementById("topbar");
     window.addEventListener("scroll", () => {
-        if (window.scrollY >= 100) topbar.classList.add("bordered");
+        if (window.scrollY >= 130) topbar.classList.add("bordered");
         else topbar.classList.remove("bordered");
     });
 </script>
