@@ -4,35 +4,203 @@ import Divider from "./Divider.astro";
 ---
 
 <style>
-    .card-picture,
+    /* Card picture */
+
+    .card-picture {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .card-picture img {
+        width: 220px;
+        height: fit-content;
+    }
+
+    /* Card data */
+
     .card-data {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: 1rem;
     }
 
-    .card-picture {
-        width: 280px;
+    /* Card header */
+
+    .card-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-header .job-title {
+        font-size: 1.45rem;
+    }
+
+    .card-header .job-time {
+        color: var(--gray);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .card-header .job-company {
+        color: var(--primary_2);
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 0.4rem;
+    }
+
+    /* Job description */
+
+    .card-data .description {
+        margin: 1rem 0;
+    }
+
+    /* Acordion */
+
+    .acordion {
+        flex-direction: column;
+        max-height: 0;
+        display: flex;
+        overflow: hidden;
+        transition: all 350ms ease-in-out;
+    }
+
+    .acordion.expanded {
+        max-height: 500px;
+    }
+
+    .acordion-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .acordion-section ul {
+        list-style-position: inside;
+        color: var(--text_2);
+        font-size: 0.9rem;
+    }
+
+    .acordion-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .tech-list {
+        display: flex;
+        list-style: none;
+        gap: 0.5rem;
+    }
+
+    /* Acordion button */
+
+    .acordion-btn {
+        padding: 0;
+        width: fit-content;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        gap: 0.35rem;
+        color: var(--primary_2);
+        background-color: transparent;
+    }
+
+    .acordion-btn span {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    .acordion-btn svg {
+        stroke: var(--primary_2);
+        transition: transform 100ms ease;
+    }
+
+    .acordion-btn.expanded svg {
+        transform: rotate(180deg);
+    }
+
+    .acordion-btn .see-less {
+        display: none;
+    }
+
+    .acordion-btn.expanded .see-less {
+        display: flex;
+    }
+
+    .acordion-btn.expanded .see-more {
+        display: none;
     }
 </style>
 <Card>
     <div class="card-picture">
-        <img src="/photo.jpg" alt="" />
+        <img src="/le.png" alt="" />
     </div>
     <Divider />
     <div class="card-data">
-        <h1 class="job-title">Desarrollador Full Stack</h1>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-            beatae. Similique, laudantium excepturi illum nisi iure repellendus,
-            nesciunt dolorem, odio tempora harum tenetur accusantium ea
-            explicabo quasi accusamus repudiandae natus?
+        <div class="card-header">
+            <h1 class="job-title">Desarrollador Web Full Stack</h1>
+            <span class="job-time">Agosto 2020 - Julio 2021 (1 año)</span>
+            <span class="job-company">Lámparas Estella S.A. de C.V.</span>
+        </div>
+        <p class="description">
+            Participé como prestador de servicio social en el desarrollo de un
+            sistema web que permitió agilizar las operaciones en los almacenes
+            de la empresa y reducir hasta en un 50% el tiempo requerido para
+            desempeñarlas, principalmente, el registro y actualización del stock
+            y la agilización de las ventas.
         </p>
-        <ul>
-            <li>Lista uno dos tres</li>
-            <li>Lista uno dos tres</li>
-            <li>Lista uno dos tres</li>
-            <li>Lista uno dos tres</li>
-        </ul>
+        <div class="acordion" id="acordion">
+            <div class="acordion-section">
+                <span class="acordion-title">Actividades</span>
+                <ul>
+                    <li>
+                        Diseño y programación de interfaces de usuario con
+                        React.js.
+                    </li>
+                    <li>Desarrollo de componentes reutilizables.</li>
+                    <li>Consumo de APIs con Javascript.</li>
+                    <li>Desarrollo de APIs con Node.js y Express.js.</li>
+                    <li>Modelado e implementación de la base de datos.</li>
+                </ul>
+            </div>
+            <div class="acordion-section">
+                <span class="acordion-title">Tecnologias</span>
+                <ul class="tech-list">
+                    <li>React.js</li>
+                    <li>HTML</li>
+                    <li>Styled Components</li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn acordion-btn" id="toggle-acordion">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                height="24"
+                width="24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+            </svg>
+            <span class="see-more">Ver más</span>
+            <span class="see-less">Ver menos</span>
+        </button>
     </div>
 </Card>
+<script>
+    const acordion = document.getElementById("acordion");
+    const toggleAcordionBtn = document.getElementById("toggle-acordion");
+    toggleAcordionBtn.addEventListener("click", () => {
+        toggleAcordionBtn.classList.toggle("expanded");
+        acordion.classList.toggle("expanded");
+    });
+</script>
