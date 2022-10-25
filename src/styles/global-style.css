@@ -3,11 +3,11 @@
     --text: black;
     --text_2: #333;
     --gray: #666;
-    --hover: #00000015;
+    --hover: #00000010;
     --primary: #ffb200;
     --secondary: #000000;
     --primary_2: #d13500;
-    --glass: #ffffff99;
+    --glass: #ffffffaa;
 }
 
 * {
@@ -20,13 +20,13 @@
 body.dark {
     --background: #111;
     --text: white;
-    --text_2: #ddd;
+    --text_2: #c5c5c5;
     --gray: #999;
-    --hover: #ffffff18;
+    --hover: #ffffff15;
     --primary: #ffb200;
     --primary_2: #ffb200;
     --secondary: #ffffff;
-    --glass: #11111199;
+    --glass: #111111aa;
 }
 
 body {
