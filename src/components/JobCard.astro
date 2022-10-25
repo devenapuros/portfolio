@@ -1,6 +1,18 @@
 ---
 import Card from "./Card.astro";
 import Divider from "./Divider.astro";
+import TechItem from "./TechItem.astro";
+
+const {
+    id,
+    jobPicture,
+    jobTitle,
+    jobTime,
+    jobCompany,
+    jobDescription,
+    jobActivities,
+    jobTechnologies,
+} = Astro.props;
 ---
 
 <style>
@@ -58,9 +70,9 @@ import Divider from "./Divider.astro";
         margin: 1rem 0;
     }
 
-    /* Acordion */
+    /* Accordion */
 
-    .acordion {
+    .accordion {
         flex-direction: column;
         max-height: 0;
         display: flex;
@@ -68,123 +80,125 @@ import Divider from "./Divider.astro";
         transition: all 350ms ease-in-out;
     }
 
-    .acordion.expanded {
+    .accordion.expanded {
         max-height: 500px;
     }
 
-    .acordion-section {
+    .accordion-section {
         display: flex;
         flex-direction: column;
-        gap: 0.35rem;
+        gap: 0.5rem;
         margin-bottom: 1rem;
     }
 
-    .acordion-section ul {
-        list-style-position: inside;
+    .accordion-section ul {
+        list-style: outside;
         color: var(--text_2);
         font-size: 0.9rem;
+        margin-left: 1rem;
     }
 
-    .acordion-title {
+    .accordion-title {
         font-size: 0.9rem;
         font-weight: 600;
         color: var(--text);
     }
 
+    /* Tech list */
+
     .tech-list {
         display: flex;
         list-style: none;
-        gap: 0.5rem;
+        column-gap: 1.1rem;
+        row-gap: 0.45rem;
+        flex-wrap: wrap;
+        margin-left: 0 !important;
+        white-space: nowrap;
     }
 
-    /* Acordion button */
+    /* Accordion button */
 
-    .acordion-btn {
+    .accordion-btn {
         padding: 0;
         width: fit-content;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         border-radius: 6px;
         gap: 0.35rem;
         color: var(--primary_2);
         background-color: transparent;
     }
 
-    .acordion-btn span {
+    .accordion-btn span {
         display: flex;
         align-items: center;
         gap: 0.35rem;
     }
 
-    .acordion-btn svg {
+    .accordion-btn svg {
         stroke: var(--primary_2);
         transition: transform 100ms ease;
     }
 
-    .acordion-btn.expanded svg {
+    .accordion-btn.expanded svg {
         transform: rotate(180deg);
     }
 
-    .acordion-btn .see-less {
+    .accordion-btn .see-less {
         display: none;
     }
 
-    .acordion-btn.expanded .see-less {
+    .accordion-btn.expanded .see-less {
         display: flex;
     }
 
-    .acordion-btn.expanded .see-more {
+    .accordion-btn.expanded .see-more {
         display: none;
     }
 </style>
 <Card>
     <div class="card-picture">
-        <img src="/le.png" alt="" />
+        <img src={`/${jobPicture}`} alt="" />
     </div>
     <Divider />
     <div class="card-data">
         <div class="card-header">
-            <h1 class="job-title">Desarrollador Web Full Stack</h1>
-            <span class="job-time">Agosto 2020 - Julio 2021 (1 año)</span>
-            <span class="job-company">Lámparas Estella S.A. de C.V.</span>
+            <h1 class="job-title">{jobTitle}</h1>
+            <span class="job-time">{jobTime}</span>
+            <span class="job-company">{jobCompany}</span>
         </div>
-        <p class="description">
-            Participé como prestador de servicio social en el desarrollo de un
-            sistema web que permitió agilizar las operaciones en los almacenes
-            de la empresa y reducir hasta en un 50% el tiempo requerido para
-            desempeñarlas, principalmente, el registro y actualización del stock
-            y la agilización de las ventas.
-        </p>
-        <div class="acordion" id="acordion">
-            <div class="acordion-section">
-                <span class="acordion-title">Actividades</span>
+        <p class="description">{jobDescription}</p>
+        <div class="accordion expanded" id={`accordion-${id}`}>
+            <div class="accordion-section">
+                <span class="accordion-title">Actividades</span>
                 <ul>
-                    <li>
-                        Diseño y programación de interfaces de usuario con
-                        React.js.
-                    </li>
-                    <li>Desarrollo de componentes reutilizables.</li>
-                    <li>Consumo de APIs con Javascript.</li>
-                    <li>Desarrollo de APIs con Node.js y Express.js.</li>
-                    <li>Modelado e implementación de la base de datos.</li>
+                    {jobActivities.map((activity) => <li>{activity}</li>)}
                 </ul>
             </div>
-            <div class="acordion-section">
-                <span class="acordion-title">Tecnologias</span>
+            <div class="accordion-section">
+                <span class="accordion-title">Tecnologías</span>
                 <ul class="tech-list">
-                    <li>React.js</li>
-                    <li>HTML</li>
-                    <li>Styled Components</li>
+                    {
+                        jobTechnologies.map((technology) => (
+                            <TechItem
+                                name={technology.name}
+                                icon={technology.icon}
+                            />
+                        ))
+                    }
                 </ul>
             </div>
         </div>
-        <button class="btn acordion-btn" id="toggle-acordion">
+        <button
+            class="btn accordion-btn expanded"
+            data-target={`accordion-${id}`}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
-                height="24"
-                width="24"
+                height="21"
+                width="21"
             >
                 <path
                     stroke-linecap="round"
@@ -196,11 +210,3 @@ import Divider from "./Divider.astro";
         </button>
     </div>
 </Card>
-<script>
-    const acordion = document.getElementById("acordion");
-    const toggleAcordionBtn = document.getElementById("toggle-acordion");
-    toggleAcordionBtn.addEventListener("click", () => {
-        toggleAcordionBtn.classList.toggle("expanded");
-        acordion.classList.toggle("expanded");
-    });
-</script>

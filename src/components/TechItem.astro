@@ -1,0 +1,20 @@
+---
+const { name, icon } = Astro.props;
+---
+
+<style>
+    li {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.8125rem;
+    }
+    li img {
+        height: 19px;
+        width: fit-content;
+    }
+</style>
+<li>
+    <img src={`/icons/${icon}.svg`} alt={name} />
+    {name}
+</li>
