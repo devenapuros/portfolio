@@ -1,0 +1,27 @@
+---
+import HeroCard from "../components/HeroCard.astro";
+import heros from "../data/heros.json";
+---
+
+<style>
+    section {
+        padding: 3rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .heros-grid {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+</style>
+<section>
+    <h1><span class="primary-text">#</span> Mis heroes</h1>
+    <p>Un pequeño homenaje a algunas personas que considero mis referentes.</p>
+    <div class="heros-grid">
+        {heros.map((hero) => <HeroCard {...hero} />)}
+    </div>
+</section>

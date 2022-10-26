@@ -1,13 +1,14 @@
 :root {
-    --background: #fcffff;
-    --text: #111;
-    --text_2: #333;
-    --gray: #666;
-    --hover: #00000013;
+    --background: #ffffff;
+    --text: #000;
+    --text_2: #222;
+    --gray: #777;
+    --hover: #00000015;
+    --hover_2: #0000000a;
     --primary: #ffa200;
     --secondary: #000000;
     --primary_2: #d04300;
-    --primary_3: #b8582b;
+    --primary_3: #b21e35;
     --glass: #fcffffaa;
 }
 
@@ -19,16 +20,17 @@
 }
 
 body.dark {
-    --background: #00090f;
+    --background: #0b0e14;
     --text: #f3f3f3;
     --text_2: #ccc;
     --gray: #999;
     --hover: #ffffff18;
+    --hover_2: #ffffff0d;
     --primary: #ffb200;
     --primary_2: #ffb200;
-    --primary_3: #df8a36;
+    --primary_3: #f25c54;
     --secondary: #ffffff;
-    --glass: #00090faa;
+    --glass: #0b0e14aa;
 }
 
 body {
