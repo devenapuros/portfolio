@@ -2,6 +2,7 @@
     {
         "id": "le_warehouse",
         "jobPicture": "le.png",
+        "jobColor": "#0086eb",
         "jobTitle": "Desarrollador Web Full Stack",
         "jobTime": "Enero 2022 - Presente (9 meses)",
         "jobCompany": "Lámparas Estella S.A. de C.V.",
@@ -61,6 +62,7 @@
     {
         "id": "sca-fi",
         "jobPicture": "fi.png",
+        "jobColor": "#3a7d44",
         "jobTitle": "Desarrollador Web Full Stack",
         "jobTime": "Agosto 2020 - Julio 2021 (1 año)",
         "jobCompany": "Facultad de Ingeniería UAEMex",
@@ -78,7 +80,15 @@
             { "name": "JQuery", "icon": "jquery" },
             { "name": "PHP", "icon": "php" },
             { "name": "MySQL", "icon": "mysql" },
-            { "name": "Composer", "icon": "composer" }
+            { "name": "Composer", "icon": "composer" },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "GitLab",
+                "icon": "gitlab"
+            }
         ]
     }
 ]

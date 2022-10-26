@@ -1,0 +1,70 @@
+[
+    {
+        "id": "firefly-components",
+        "projectPicture": "le.png",
+        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+        "projectSite": "https://firefly-components.netlify.app/",
+        "projectTitle": "Firefly Components - Minimalist and reusable component set",
+        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+
+        "projectTechnologies": [
+            { "name": "React.js", "icon": "react" },
+            {
+                "name": "Styled Components",
+                "icon": "styledcomponents"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "Github",
+                "icon": "github"
+            }
+        ]
+    },
+    {
+        "id": "giboo",
+        "projectPicture": "giboo.png",
+        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+        "projectSite": "https://firefly-components.netlify.app/",
+        "projectTitle": "Giboo - Thousands of gifs waiting to be discovered",
+        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+
+        "projectTechnologies": [
+            { "name": "React.js", "icon": "react" },
+            {
+                "name": "Styled Components",
+                "icon": "styledcomponents"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "NPM",
+                "icon": "npm"
+            },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "Github",
+                "icon": "github"
+            },
+            {
+                "name": "Vite",
+                "icon": "vite"
+            },
+            {
+                "name": "Netlify",
+                "icon": "netlify"
+            }
+        ]
+    }
+]
