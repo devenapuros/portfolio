@@ -1,13 +1,14 @@
 :root {
-    --background: #fff;
-    --text: black;
+    --background: #fcffff;
+    --text: #111;
     --text_2: #333;
     --gray: #666;
-    --hover: #00000010;
-    --primary: #ffb200;
+    --hover: #00000013;
+    --primary: #ffa200;
     --secondary: #000000;
-    --primary_2: #d13500;
-    --glass: #ffffffaa;
+    --primary_2: #d04300;
+    --primary_3: #b8582b;
+    --glass: #fcffffaa;
 }
 
 * {
@@ -18,15 +19,16 @@
 }
 
 body.dark {
-    --background: #111;
-    --text: white;
-    --text_2: #c5c5c5;
+    --background: #00090f;
+    --text: #f3f3f3;
+    --text_2: #ccc;
     --gray: #999;
-    --hover: #ffffff15;
+    --hover: #ffffff18;
     --primary: #ffb200;
     --primary_2: #ffb200;
+    --primary_3: #df8a36;
     --secondary: #ffffff;
-    --glass: #111111aa;
+    --glass: #00090faa;
 }
 
 body {
@@ -70,11 +72,11 @@ p {
 
 .primary-btn {
     background-color: var(--primary);
-    color: #000;
+    color: #111;
 }
 
 .primary-btn svg {
-    stroke: #000;
+    stroke: #111;
 }
 
 .secondary-btn {
@@ -84,4 +86,8 @@ p {
 
 .secondary-btn svg {
     stroke: var(--background);
+}
+
+.primary-text {
+    color: var(--primary);
 }
