@@ -1,0 +1,19 @@
+---
+import EducationCard from "../components/EducationCard.astro";
+import educationDegrees from "../data/education.json";
+---
+
+<style>
+    section {
+        padding: 3rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+</style>
+<section>
+    <h1>
+        <span class="primary-text">#</span> Educación, cursos y certificaciones
+    </h1>
+    {educationDegrees.map((education) => <EducationCard {...education} />)}
+</section>

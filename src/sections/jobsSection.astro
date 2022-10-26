@@ -5,14 +5,14 @@ import jobs from "../data/jobs.json";
 
 <style>
     section {
-        padding: 3rem 0 5rem 0;
+        padding: 3rem 0 4rem 0;
         display: flex;
         flex-direction: column;
         gap: 3rem;
     }
 </style>
 <section>
-    <h1>Experiencia laboral</h1>
+    <h1><span class="primary-text">#</span> Experiencia laboral</h1>
     {jobs.map((job) => <JobCard {...job} />)}
 </section>
 <script>

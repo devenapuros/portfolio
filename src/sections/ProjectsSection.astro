@@ -1,0 +1,18 @@
+---
+import Card from "../components/Card.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import projects from "../data/projects.json";
+---
+
+<style>
+    section {
+        padding: 3rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+</style>
+<section>
+    <h1><span class="primary-text">#</span> Proyectos</h1>
+    {projects.map((project) => <ProjectCard {...project} />)}
+</section>

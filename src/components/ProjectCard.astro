@@ -5,14 +5,12 @@ import TechItem from "./TechItem.astro";
 
 const {
     id,
-    jobPicture,
-    jobTitle,
-    jobTime,
-    jobCompany,
-    jobDescription,
-    jobActivities,
-    jobTechnologies,
-    jobColor,
+    projectPicture,
+    projectTitle,
+    projectRepo,
+    projectSite,
+    projectDescription,
+    projectTechnologies,
 } = Astro.props;
 ---
 
@@ -46,29 +44,37 @@ const {
     .card-header {
         display: flex;
         flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .card-header .job-title {
+    .card-header .project-title {
         font-size: 1.45rem;
     }
 
-    .card-header .job-time {
-        color: var(--gray);
-        font-weight: 600;
-        font-size: 1rem;
-        margin-top: 0.4rem;
+    .project-links {
+        display: flex;
+        gap: 0.8rem;
     }
 
-    .card-header .job-company {
-        font-weight: 600;
-        font-size: 1rem;
-        color: var(--primary_3);
+    .project-links .btn {
+        padding: 0.4rem 1rem;
+        background-color: var(--hover);
+        border-radius: 48px;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.8125rem;
+        font-weight: 400;
+        gap: 0.4rem;
+    }
+
+    .project-links .btn svg {
+        stroke: var(--text);
     }
 
     /* Job description */
 
     .card-data .description {
-        margin: 1rem 0;
+        margin: 1.5rem 0;
     }
 
     /* Accordion */
@@ -159,30 +165,65 @@ const {
 <Card>
     <div class="card-picture">
         <img
-            src={`/${jobPicture}`}
-            alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
+            src={`/${projectPicture}`}
+            alt={`Logo of ${projectTitle} project`}
         />
     </div>
     <Divider />
     <div class="card-data">
         <div class="card-header">
-            <h1 class="job-title">{jobTitle}</h1>
-            <span class="job-company">{jobCompany}</span>
-            <span class="job-time">{jobTime}</span>
-        </div>
-        <p class="description">{jobDescription}</p>
-        <div class="accordion expanded" id={`accordion-${id}`}>
-            <div class="accordion-section">
-                <span class="accordion-title">Actividades</span>
-                <ul>
-                    {jobActivities.map((activity) => <li>{activity}</li>)}
-                </ul>
+            <h1 class="project-title">{projectTitle}</h1>
+            <div class="project-links">
+                {
+                    projectRepo && (
+                        <a href={projectRepo} class="btn" target="_blank">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-github"
+                            >
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                            GitHub
+                        </a>
+                    )
+                }
+                {
+                    projectSite && (
+                        <a href={projectSite} class="btn" target="_blank">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                height="20"
+                                width="20"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                />
+                            </svg>
+                            Ir al sitio
+                        </a>
+                    )
+                }
             </div>
+        </div>
+        <p class="description">{projectDescription}</p>
+        <div class="accordion expanded" id={`accordion-${id}`}>
             <div class="accordion-section">
                 <span class="accordion-title">Tecnologías</span>
                 <ul class="tech-list">
                     {
-                        jobTechnologies.map((technology) => (
+                        projectTechnologies.map((technology) => (
                             <TechItem
                                 name={technology.name}
                                 icon={technology.icon}

@@ -1,0 +1,123 @@
+---
+import Card from "./Card.astro";
+import Divider from "./Divider.astro";
+import TechItem from "./TechItem.astro";
+
+const {
+    id,
+    educationPicture,
+    educationTitle,
+    educationTime,
+    educationCompany,
+    educationLink,
+} = Astro.props;
+---
+
+<style>
+    /* Card picture */
+
+    .card-picture {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+
+    .card-picture img {
+        width: 260px;
+        height: fit-content;
+        border-radius: 0.35rem;
+    }
+
+    /* Card data */
+
+    .card-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    /* Card header */
+
+    .card-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .card-header .education-title {
+        font-size: 1.45rem;
+    }
+
+    .card-header .education-time {
+        color: var(--gray);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .card-header .education-company {
+        color: var(--primary_2);
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 0.3rem;
+    }
+
+    .education-link {
+        width: fit-content;
+        padding: 0.4rem 1rem;
+        background-color: var(--hover);
+        border-radius: 48px;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.8125rem;
+        font-weight: 400;
+        gap: 0.4rem;
+    }
+
+    .education-link svg {
+        stroke: var(--text);
+    }
+</style>
+<Card>
+    <div class="card-picture">
+        <img
+            src={`/education/${educationPicture}`}
+            alt={`Picture of ${educationTitle} degree`}
+        />
+    </div>
+    <Divider />
+    <div class="card-data">
+        <div class="card-header">
+            <h1 class="education-title">{educationTitle}</h1>
+            <span class="education-time">{educationTime}</span>
+            <span class="education-company">{educationCompany}</span>
+        </div>
+        {
+            educationLink && (
+                <a
+                    href={educationLink}
+                    class="btn education-link"
+                    target="_blank"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        height="20"
+                        width="20"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                        />
+                    </svg>
+                    Ver credencial
+                </a>
+            )
+        }
+    </div>
+</Card>
