@@ -96,7 +96,7 @@ const {
         list-style: outside;
         color: var(--text_2);
         font-size: 0.9rem;
-        margin-left: 1rem;
+        margin-left: 1.1rem;
     }
 
     .accordion-title {
@@ -160,7 +160,7 @@ const {
 <Card>
     <div class="card-picture">
         <img
-            src={`/${jobPicture}`}
+            src={`/jobs/${jobPicture}`}
             alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
         />
     </div>
@@ -172,7 +172,7 @@ const {
             <span class="job-time">{jobTime}</span>
         </div>
         <p class="description">{jobDescription}</p>
-        <div class="accordion expanded" id={`accordion-${id}`}>
+        <div class="accordion" id={`accordion-${id}`}>
             <div class="accordion-section">
                 <span class="accordion-title">Actividades</span>
                 <ul>
@@ -194,7 +194,7 @@ const {
             </div>
         </div>
         <button
-            class="btn accordion-btn expanded"
+            class="btn accordion-btn"
             data-target={`accordion-${id}`}
         >
             <svg

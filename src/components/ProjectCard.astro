@@ -71,6 +71,10 @@ const {
         stroke: var(--text);
     }
 
+    .project-links .btn:hover {
+        text-decoration: underline var(--primary);
+    }
+
     /* Job description */
 
     .card-data .description {
@@ -166,7 +170,7 @@ const {
 <Card>
     <div class="card-picture">
         <img
-            src={`/${projectPicture}`}
+            src={`/projects/${projectPicture}`}
             alt={`Logo of ${projectTitle} project`}
         />
     </div>
@@ -219,7 +223,7 @@ const {
             </div>
         </div>
         <p class="description">{projectDescription}</p>
-        <div class="accordion expanded" id={`accordion-${id}`}>
+        <div class="accordion" id={`accordion-${id}`}>
             <div class="accordion-section">
                 <span class="accordion-title">Tecnologías</span>
                 <ul class="tech-list">
@@ -235,7 +239,7 @@ const {
             </div>
         </div>
         <button
-            class="btn accordion-btn expanded"
+            class="btn accordion-btn"
             data-target={`accordion-${id}`}
         >
             <svg
