@@ -13,16 +13,22 @@ import Menu from "./menu.astro";
     }
 
     .bordered {
-        border-bottom: 1px solid var(--hover_2);
+        border-bottom: 1px solid var(--hover);
     }
 
     .nav-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.7rem 0;
+        padding: 1rem 0;
         width: 866px;
         margin: 0 auto;
+    }
+
+    @media screen and (max-width: 900px) {
+        .nav-container {
+            width: 90vw;
+        }
     }
 </style>
 

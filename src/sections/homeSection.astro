@@ -7,6 +7,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         gap: 3.9em;
     }
 
@@ -48,6 +49,11 @@
         align-items: center;
     }
 
+    .image-container img {
+        height: 100%;
+        width: auto;
+    }
+
     li span {
         line-height: 18px;
         font-size: 0.9rem;
@@ -63,6 +69,41 @@
         width: 16rem;
         text-decoration: none;
     }
+
+    @media screen and (max-width: 600px) {
+        .name h1 {
+            font-size: 10.5vw;
+            margin-bottom: -0.15rem;
+        }
+
+        .name span {
+            font-size: 4.5vw;
+        }
+
+        ul {
+            gap: 2.5rem;
+        }
+
+        .button-group {
+            flex-direction: column;
+        }
+
+        li .image-container {
+            height: 2.7rem;
+        }
+
+        li span {
+            font-size: 0.85rem;
+        }
+
+        .primary-btn {
+            width: fit-content !important;
+        }
+
+        .secondary-btn {
+            display: none;
+        }
+    }
 </style>
 <section>
     <div class="name">
@@ -72,21 +113,24 @@
     <ul>
         <li>
             <div class="image-container">
-                <img src="/two.svg" alt="" height="64px" />
+                <img src="/two.svg" alt="" />
             </div>
             <span>Años de<br />experiencia</span>
         </li>
         <li>
             <div class="image-container">
-                <img src="/location.svg" alt="" height="65px" />
+                <img src="/location.svg" alt="" />
             </div>
             <span>Edomex<br />México</span>
         </li>
         <li>
             <div class="image-container">
-                <img src="/coffee.svg" alt="" height="63px" />
+                <img src="/coffee.svg" alt="" />
             </div>
-            <span>Tazas de café<br />consumidas</span>
+            <span
+                >Tazas de café
+                <br />consumidas</span
+            >
         </li>
     </ul>
     <div class="button-group">

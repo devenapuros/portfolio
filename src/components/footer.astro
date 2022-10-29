@@ -10,6 +10,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         width: 866px;
         margin: 0 auto;
         color: var(--gray);
@@ -24,16 +25,16 @@
         gap: 0.35rem;
         color: var(--text);
     }
+    @media screen and (max-width: 900px) {
+        .footer-container {
+            width: 95vw;
+            font-size: 0.79rem;
+        }
+
+    }
 </style>
 <footer>
     <div class="footer-container">
         <span>Desarrollado moviendo las manitas y con mucho 🧡</span>
-        <!-- <ul>
-            <li>
-                <a href="">
-                    Descargar CV</a
-                >
-            </li>
-        </ul> -->
     </div>
 </footer>

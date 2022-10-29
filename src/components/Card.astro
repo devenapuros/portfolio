@@ -1,9 +1,16 @@
 <style>
     article {
         display: flex;
-        background-color: transparent;
+        background-color: var(--background_2);
         border-radius: 13px;
         border: 2px solid var(--hover);
+    }
+
+    @media screen and (max-width: 668px) {
+        article {
+            flex-direction: column;
+            border: 3px solid var(--hover);
+        }
     }
 </style>
 <article>

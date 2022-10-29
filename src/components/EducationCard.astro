@@ -20,6 +20,7 @@ const {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding: 1rem;
     }
 
@@ -82,6 +83,12 @@ const {
 
     .education-link:hover {
         text-decoration: underline var(--primary);
+    }
+
+    @media screen and (max-width: 668px) {
+        .card-header .education-title {
+            font-size: 1.2rem;
+        }
     }
 </style>
 <Card>

@@ -1,4 +1,5 @@
 ---
+import AccordionButton from "./AccordionButton.astro";
 import Card from "./Card.astro";
 import Divider from "./Divider.astro";
 import TechItem from "./TechItem.astro";
@@ -23,6 +24,8 @@ const {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        min-height: calc(200px + 3rem);
         padding: 1.5rem;
         gap: 1rem;
     }
@@ -56,19 +59,20 @@ const {
         color: var(--gray);
         font-weight: 600;
         font-size: 1rem;
-        margin-top: 0.8rem;
+        margin-top: 0.2rem;
+        font-size: 0.93rem;
     }
 
     .card-header .job-company {
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 0.93rem;
         color: var(--primary_3);
     }
 
     /* Job description */
 
     .card-data .description {
-        margin: 1rem 0;
+        margin: 1.5rem 0;
     }
 
     /* Accordion */
@@ -118,43 +122,18 @@ const {
         white-space: nowrap;
     }
 
-    /* Accordion button */
+    @media screen and (max-width: 600px) {
+        .card-data {
+            padding: 1rem;
+        }
 
-    .accordion-btn {
-        padding: 0;
-        width: fit-content;
-        font-size: 0.85rem;
-        border-radius: 6px;
-        gap: 0.35rem;
-        color: var(--primary_2);
-        background-color: transparent;
-    }
+        .card-header .job-title {
+            font-size: 1.2rem;
+        }
 
-    .accordion-btn span {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-    }
-
-    .accordion-btn svg {
-        stroke: var(--primary_2);
-        transition: transform 100ms ease;
-    }
-
-    .accordion-btn.expanded svg {
-        transform: rotate(180deg);
-    }
-
-    .accordion-btn .see-less {
-        display: none;
-    }
-
-    .accordion-btn.expanded .see-less {
-        display: flex;
-    }
-
-    .accordion-btn.expanded .see-more {
-        display: none;
+        .card-header .job-time {
+            font-size: 0.93rem;
+        }
     }
 </style>
 <Card>
@@ -162,13 +141,14 @@ const {
         <img
             src={`/jobs/${jobPicture}`}
             alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
+            loading="lazy"
         />
     </div>
     <Divider />
     <div class="card-data">
         <div class="card-header">
             <h1 class="job-title">{jobTitle}</h1>
-            <span class="job-company">{jobCompany}</span>
+            <!-- <span class="job-company">{jobCompany}</span> -->
             <span class="job-time">{jobTime}</span>
         </div>
         <p class="description">{jobDescription}</p>
@@ -193,25 +173,6 @@ const {
                 </ul>
             </div>
         </div>
-        <button
-            class="btn accordion-btn"
-            data-target={`accordion-${id}`}
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                height="21"
-                width="21"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-            </svg>
-            <span class="see-more">Ver más</span>
-            <span class="see-less">Ver menos</span>
-        </button>
+        <AccordionButton dataTarget={id} />
     </div>
 </Card>

@@ -38,6 +38,12 @@ const { heroName, heroDescription, heroPicture } = Astro.props;
     .hero-description {
         font-size: 0.8125rem;
     }
+
+    @media screen and (max-width: 600px) {
+        .hero-picture {
+            border: 3px solid var(--hover);
+        }
+    }
 </style>
 <Card>
     <div class="card-body">

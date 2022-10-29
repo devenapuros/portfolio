@@ -1,0 +1,62 @@
+---
+const { dataTarget } = Astro.props;
+---
+
+<style>
+    /* Accordion button */
+
+    .accordion-btn {
+        padding: 0;
+        width: fit-content;
+        font-size: 13px;
+        border-radius: 6px;
+        gap: 0.35rem;
+        color: var(--primary_2);
+        background-color: transparent;
+    }
+    
+    .accordion-btn span {
+        /* font-weight: 400; */
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    .accordion-btn svg {
+        stroke: var(--primary_2);
+        transition: transform 100ms ease;
+    }
+
+    .accordion-btn.expanded svg {
+        transform: rotate(180deg);
+    }
+
+    .accordion-btn .see-less {
+        display: none;
+    }
+
+    .accordion-btn.expanded .see-less {
+        display: flex;
+    }
+
+    .accordion-btn.expanded .see-more {
+        display: none;
+    }
+</style>
+<button class="btn accordion-btn" data-target={`accordion-${dataTarget}`}>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        height="21"
+        width="21"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+    </svg>
+    <span class="see-more">Ver más</span>
+    <span class="see-less">Ver menos</span>
+</button>

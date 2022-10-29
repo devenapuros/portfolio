@@ -30,8 +30,71 @@ import ThemeToggle from "./themeToggle.astro";
     li.active a {
         color: var(--primary_2);
     }
+
+    .menu-btn {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        border-radius: 6px;
+        stroke: var(--text);
+        background-color: transparent;
+        border: 0;
+        z-index: 1;
+    }
+
+    .menu-btn svg {
+        stroke: var(--text);
+    }
+
+    .menu-btn:hover {
+        cursor: pointer;
+        background-color: var(--hover);
+    }
+
+    .menu-btn .close-icon {
+        display: none;
+    }
+
+    @media screen and (max-width: 850px) {
+        ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            flex-direction: column;
+            background-color: var(--background);
+            z-index: 3;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        ul li {
+            font-size: 1.35rem;
+        }
+
+        ul.menu-expanded {
+            display: flex;
+        }
+
+        .menu-btn {
+            display: flex;
+            z-index: 3;
+        }
+
+        .menu-btn.menu-expanded .menu-icon {
+            display: none;
+        }
+
+        .menu-btn.menu-expanded .close-icon {
+            display: flex;
+        }
+    }
 </style>
-<ul>
+<ul id="topbar-menu">
     <li class="active"><a href="">Inicio</a></li>
     <li><a href="">Sobre mi</a></li>
     <li><a href="">Experiencia</a></li>
@@ -42,3 +105,42 @@ import ThemeToggle from "./themeToggle.astro";
         <ThemeToggle />
     </li>
 </ul>
+<button class="menu-btn" id="menu-btn">
+    <svg
+        class="menu-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        height="28"
+        width="28"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
+    </svg>
+    <svg
+        class="close-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        height="28"
+        width="28"
+        
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+</button>
+<script>
+    const $menu = document.getElementById("topbar-menu");
+    const $menuBtn = document.getElementById("menu-btn");
+    $menuBtn.addEventListener("click", (event) => {
+        $menu.classList.toggle("menu-expanded");
+        $menuBtn.classList.toggle("menu-expanded");
+    });
+</script>
