@@ -25,14 +25,14 @@ const {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: calc(200px + 3rem);
-        padding: 1.5rem;
         gap: 1rem;
+        background-color: #007f5fff;
     }
 
     .card-picture img {
-        width: 200px;
+        width: 300px;
         height: fit-content;
+        border: 0;
     }
 
     /* Card data */
@@ -58,14 +58,13 @@ const {
     .card-header .job-time {
         color: var(--gray);
         font-weight: 600;
-        font-size: 1rem;
-        margin-top: 0.2rem;
-        font-size: 0.93rem;
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
     }
 
     .card-header .job-company {
         font-weight: 600;
-        font-size: 0.93rem;
+        font-size: 0.9rem;
         color: var(--primary_3);
     }
 
@@ -148,7 +147,7 @@ const {
     <div class="card-data">
         <div class="card-header">
             <h1 class="job-title">{jobTitle}</h1>
-            <!-- <span class="job-company">{jobCompany}</span> -->
+            <span class="job-company">{jobCompany}</span>
             <span class="job-time">{jobTime}</span>
         </div>
         <p class="description">{jobDescription}</p>
