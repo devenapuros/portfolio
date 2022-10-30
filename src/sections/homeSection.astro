@@ -8,26 +8,20 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 3.9em;
+        gap: 3.5em;
     }
 
     .name {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .name h1 {
         font-size: 2rem !important;
         color: var(--gray);
     }
 
-    .name .slogan {
-        font-size: 3.5rem;
+    .slogan {
+        font-size: 3.4rem;
         font-weight: 800;
         color: var(--text);
         line-height: 1;
+        width: 90%;
     }
 
     ul {
@@ -38,28 +32,31 @@
 
     li {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        text-align: start;
+        text-align: center;
         gap: 0.4rem;
         color: var(--text_2);
     }
 
-    li .image-container {
-        height: 3.5rem;
+    li .counter {
         display: flex;
-        justify-content: center;
         align-items: center;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        color: var(--text);
+        font-weight: 700;
     }
 
-    .image-container img {
-        height: 100%;
-        width: auto;
+    li .counter svg {
+        stroke: var(--gray);
     }
 
-    li span {
-        line-height: 18px;
-        font-size: 0.9rem;
+    li .label {
+        line-height: 1;
+        font-size: 0.8rem;
+        font-family: "JetBrains Mono", monospace;
     }
 
     .button-group {
@@ -74,16 +71,16 @@
     }
 
     @media screen and (max-width: 600px) {
-        .name h1 {
-            font-size: 1.5rem;
+        .name {
+            font-size: 1.2rem;
         }
 
-        .name .slogan {
-            font-size: 2.8rem;
+        .slogan {
+            font-size: 2.5rem;
         }
 
         ul {
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .button-group {
@@ -97,15 +94,6 @@
             border-radius: 0.5rem;
         }
 
-        li .image-container {
-            height: 2.7rem;
-        }
-
-        li slogan {
-            font-size: 0.7rem;
-            line-height: 1.2;
-        }
-
         .primary-btn {
             width: fit-content !important;
         }
@@ -113,44 +101,86 @@
         .secondary-btn {
             width: fit-content !important;
         }
+
         .secondary-btn span {
             display: none;
         }
     }
 </style>
 <section>
-    <div class="name">
-        <h1>Hola! soy Daniel Gómez.</h1>
-        <h2 class="slogan">
-            Desarrollador con pasión por construir sitios web memorables<span
-                class="primary-text">.</span
-            >
-        </h2>
-    </div>
+    <h1 class="name">Hola! soy Daniel Gómez.</h1>
+    <h2 class="slogan">
+        Desarrollador con pasión por construir sitios web memorables<span
+            class="primary-text">.</span
+        >
+    </h2>
+
     <ul>
         <li>
-            <div class="image-container">
-                <!-- <img src="/two.svg" alt="" /> -->
-                <h1>2</h1>
-            </div>
-            <span>Años de<br />experiencia</span>
+            <span class="counter">
+                2
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    height="24"
+                    width="24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                    ></path>
+                </svg>
+            </span>
+            <span class="label">Años de<br />experiencia</span>
         </li>
         <li>
-            <div class="image-container">
-                <!-- <img src="/location.svg" alt="" /> -->
-                <h1>100k</h1>
-            </div>
-            <span>Lineas de <br />código escritas</span>
+            <span class="counter">
+                100k
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    height="24"
+                    width="24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
+                    ></path>
+                </svg>
+            </span>
+            <span class="label">Lineas de <br />código escritas</span>
         </li>
         <li>
-            <div class="image-container">
-                <!-- <img src="/coffee.svg" alt="" /> -->
-                <h1>1.2k</h1>
-            </div>
-            <span
-                >Tazas de café
-                <br />consumidas</span
-            >
+            <span class="counter">
+                1.2k
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-coffee"
+                    ><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path
+                        d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"
+                    ></path><line x1="6" y1="1" x2="6" y2="4"></line><line
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="4"></line><line x1="14" y1="1" x2="14" y2="4"
+                    ></line>
+                </svg>
+            </span>
+            <span class="label">Tazas de café<br />consumidas</span>
         </li>
     </ul>
     <div class="button-group">
