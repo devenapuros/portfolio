@@ -1,13 +1,13 @@
 :root {
-    --background: #f8f9fa;
+    --background: #fafbfc;
     --background_2: #fafbfc;
-    --text: #0b0e14;
+    --text: #111;
     --text_2: #333;
     --gray: #6a6a6a;
-    --hover: #00000015;
+    --hover: #00000010;
     --hover_2: #0000000e;
     --primary: #ffa200;
-    --secondary: #0b0e14;
+    --secondary: #111;
     --primary_2: #d04300;
     --primary_3: #b21e35;
     --glass: #f8f9faaa;
@@ -17,11 +17,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    /* font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-        sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-        Noto Color Emoji; */
+    font-family: "Inter", sans-serif;
+}
+
+body.dark {
+    --background: #111;
+    --background_2: #0c1018;
+    --text: #f1f1f1;
+    --text_2: #ddd;
+    --gray: #999;
+    --hover: #ffffff18;
+    --hover_2: #ffffff0e;
+    --primary: #ffb200;
+    --primary_2: #e87742;
+    --primary_3: #f25c54;
+    --secondary: #ffffff;
+    --glass: #0b0e14bb;
 }
 
 * {
@@ -44,20 +55,7 @@
     border: 3px solid var(--background);
 }
 
-body.dark {
-    --background: #0b0e14;
-    --background_2: #0c1018;
-    --text: #f1f1f1;
-    --text_2: #ddd;
-    --gray: #999;
-    --hover: #ffffff18;
-    --hover_2: #ffffff0e;
-    --primary: #ffb200;
-    --primary_2: #e87742;
-    --primary_3: #f25c54;
-    --secondary: #ffffff;
-    --glass: #0b0e14bb;
-}
+
 
 body {
     background-color: var(--background);
@@ -70,17 +68,19 @@ h4,
 h5,
 h6 {
     color: var(--text);
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Inter", sans-serif;
 }
 
 h1 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1;
 }
 
 p {
     color: var(--text_2);
     font-size: 0.9rem;
+    font-family: "Inter", sans-serif;
 }
 
 .btn {
@@ -91,7 +91,7 @@ p {
     gap: 0.6rem;
     border: 0;
     outline: none;
-    border-radius: 2rem;
+    border-radius: 1rem;
     font-weight: 600;
     font-size: 0.93rem;
 }
@@ -110,7 +110,7 @@ p {
 }
 
 .secondary-btn {
-    background-color: var(--secondary);
+    background-color: var(--text);
     color: var(--background);
 }
 

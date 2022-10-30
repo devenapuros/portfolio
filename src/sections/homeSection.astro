@@ -15,17 +15,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
 
     .name h1 {
-        font-size: 5.7rem;
-        margin-bottom: -1rem;
+        font-size: 2rem !important;
+        color: var(--gray);
     }
 
-    .name span {
-        font-size: 1.65rem;
-        font-weight: 600;
-        color: var(--gray);
+    .name .slogan {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--text);
+        line-height: 1;
     }
 
     ul {
@@ -36,8 +38,9 @@
 
     li {
         display: flex;
-        flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: start;
         gap: 0.4rem;
         color: var(--text_2);
     }
@@ -72,12 +75,11 @@
 
     @media screen and (max-width: 600px) {
         .name h1 {
-            font-size: 10.5vw;
-            margin-bottom: -0.15rem;
+            font-size: 1.5rem;
         }
 
-        .name span {
-            font-size: 4.5vw;
+        .name .slogan {
+            font-size: 2.8rem;
         }
 
         ul {
@@ -88,12 +90,20 @@
             gap: 1rem;
         }
 
+        li {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
         li .image-container {
             height: 2.7rem;
         }
 
-        li span {
-            font-size: 0.85rem;
+        li slogan {
+            font-size: 0.7rem;
+            line-height: 1.2;
         }
 
         .primary-btn {
@@ -110,25 +120,32 @@
 </style>
 <section>
     <div class="name">
-        <h1>Daniel Gómez</h1>
-        <span>Desarrollador Frontend Junior</span>
+        <h1>Hola! soy Daniel Gómez.</h1>
+        <h2 class="slogan">
+            Desarrollador con pasión por construir sitios web memorables<span
+                class="primary-text">.</span
+            >
+        </h2>
     </div>
     <ul>
         <li>
             <div class="image-container">
-                <img src="/two.svg" alt="" />
+                <!-- <img src="/two.svg" alt="" /> -->
+                <h1>2</h1>
             </div>
             <span>Años de<br />experiencia</span>
         </li>
         <li>
             <div class="image-container">
-                <img src="/location.svg" alt="" />
+                <!-- <img src="/location.svg" alt="" /> -->
+                <h1>100k</h1>
             </div>
-            <span>Edomex<br />México</span>
+            <span>Lineas de <br />código escritas</span>
         </li>
         <li>
             <div class="image-container">
-                <img src="/coffee.svg" alt="" />
+                <!-- <img src="/coffee.svg" alt="" /> -->
+                <h1>1.2k</h1>
             </div>
             <span
                 >Tazas de café
@@ -138,7 +155,7 @@
     </ul>
     <div class="button-group">
         <a href="#contacto" class="btn primary-btn">
-            Contacta conmigo
+            Contactar ahora
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
