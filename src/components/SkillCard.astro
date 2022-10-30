@@ -1,0 +1,49 @@
+---
+import Card from "./Card.astro";
+const { skillName, skillDescription, skillPicture } = Astro.props;
+---
+
+<style>
+    .card-body {
+        padding: 1.2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .hero-picture {
+        height: 7rem;
+        height: 7rem;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    .hero-picture img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .hero-description {
+        font-size: 0.8125rem;
+    }
+
+    
+</style>
+<Card>
+    <div class="card-body">
+        <div class="hero-picture">
+            <img src={`/skills/${skillPicture}`} alt={skillName} loading="lazy" />
+        </div>
+        <h1 class="hero-name">{skillName}</h1>
+        <p class="hero-description">{skillDescription}</p>
+    </div>
+</Card>
