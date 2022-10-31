@@ -21,8 +21,8 @@
 }
 
 body.dark {
-    --background: #111;
-    --background_2: #0c1018;
+    --background: #0a0a0a;
+    --background_2: #0c0c0c;
     --text: #f1f1f1;
     --text_2: #ddd;
     --gray: #999;

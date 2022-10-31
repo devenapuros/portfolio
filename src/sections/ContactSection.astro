@@ -1,3 +1,9 @@
+---
+import EmailCard from "../contactCards/EmailCard.astro";
+import GithubCard from "../contactCards/GithubCard.astro";
+import LinkedinCard from "../contactCards/LinkedinCard.astro";
+---
+
 <style>
     section {
         padding: 3rem 0 5rem 0;
@@ -9,7 +15,7 @@
     .contact-links {
         display: flex;
         list-style: none;
-        gap: 4rem;
+        gap: 1.5rem;
     }
 
     .contact-links li {
@@ -42,51 +48,14 @@
     @media screen and (max-width: 800px) {
         .contact-links {
             flex-direction: column;
-            gap: 3rem;
         }
     }
 </style>
 <section>
-    <h1><span class="primary-text">#</span> Contacto</h1>
+    <h1>Contacto<span class="primary-text">.</span></h1>
     <ul class="contact-links">
-        <li>
-            Envíame un email:
-            <a href="">
-                <img
-                    class="link-picture"
-                    src="/envelope.svg"
-                    alt=""
-                    height="50px"
-                    width="50px"
-                />
-                devenapuros@gmail.com
-            </a>
-        </li>
-        <li>
-            Mi cuenta de LinkedIn:
-            <a href="">
-                <img
-                    class="link-picture"
-                    src="/linkedin.svg"
-                    alt="hola"
-                    height="50px"
-                    width="50px"
-                />
-                /in/fdaniel-gomez
-            </a>
-        </li>
-        <li>
-            Mi cuenta de GitHub:
-            <a href="">
-                <img
-                    class="link-picture"
-                    src="/github.svg"
-                    alt=""
-                    height="50px"
-                    width="50px"
-                />
-                /devenapuros
-            </a>
-        </li>
+        <EmailCard />
+        <LinkedinCard />
+        <GithubCard />
     </ul>
 </section>
