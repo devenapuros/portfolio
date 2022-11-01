@@ -10,10 +10,28 @@ import jobs from "../data/jobs.json";
         flex-direction: column;
         gap: 3rem;
     }
+
+    .jobs-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .timeline {
+        position: absolute;
+        left: 50%;
+        border-left: 1px dashed var(--gray);
+        height: 100%;
+        z-index: -1;
+    }
 </style>
 <section>
-    <h1><span class="primary-text">#</span> Experiencia</h1>
-    {jobs.map((job) => <JobCard {...job} />)}
+    <h1>Experiencia<span class="primary-text">.</span></h1>
+    <div class="jobs-container">
+        {jobs.map((job) => <JobCard {...job} />)}
+        <div class="timeline"></div>
+    </div>
 </section>
 <script>
     const $accordionButtons = document.querySelectorAll(".accordion-btn");

@@ -16,8 +16,6 @@ const {
 ---
 
 <style>
-    /* Card picture */
-
     .card-picture {
         display: flex;
         flex-direction: column;
@@ -61,21 +59,28 @@ const {
 
     .project-links .btn {
         padding: 0.4rem 1rem;
-        background-color: var(--hover_2);
+        background-color: var(--hover);
         border-radius: 48px;
         color: var(--text_2);
         text-decoration: none;
         font-size: 0.8125rem;
         font-weight: 400;
         gap: 0.4rem;
+        transition: all 300ms ease;
     }
 
     .project-links .btn svg {
         stroke: var(--text_2);
+        transition: 300ms ease;
     }
 
     .project-links .btn:hover {
-        text-decoration: underline var(--primary);
+        background-color: var(--text);
+        color: var(--background);
+    }
+
+    .project-links .btn:hover svg {
+        stroke: var(--background);
     }
 
     /* Job description */
@@ -135,7 +140,7 @@ const {
         .card-data {
             padding: 1rem;
         }
-        
+
         .card-header .project-title {
             font-size: 1.2rem;
         }

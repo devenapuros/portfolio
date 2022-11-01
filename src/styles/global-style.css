@@ -5,7 +5,7 @@
     --text_2: #333;
     --gray: #6a6a6a;
     --hover: #00000010;
-    --hover_2: #0000000e;
+    --hover_2: #00000018;
     --primary: #ffa200;
     --secondary: #111;
     --primary_2: #d04300;
@@ -54,8 +54,6 @@ body.dark {
     border-radius: 20px;
     border: 3px solid var(--background);
 }
-
-
 
 body {
     background-color: var(--background);
@@ -126,4 +124,31 @@ p {
     h1 {
         font-size: 1.9rem;
     }
+}
+
+.jobs-container article:nth-child(2n) {
+    transform: translateX(100%);
+    padding-right: 0;
+}
+
+.jobs-container article:nth-child(2n + 1) {
+    padding-left: 0;
+}
+
+.jobs-container article:nth-child(2n + 1) .card-picture {
+    left: calc(100% + 1.5rem);
+}
+
+.jobs-container article:nth-child(2n) .card-picture {
+    left: calc(-120px - 1.5rem);
+}
+
+.jobs-container article:nth-child(2n + 1) .circle {
+    left: calc(100% - 10px);
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(#fdc830, #f37335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

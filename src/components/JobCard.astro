@@ -18,22 +18,60 @@ const {
 ---
 
 <style>
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        gap: 1rem;
+        width: 50%;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        background: var(--primary); /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            to bottom,
+            var(--primary),
+            #fdc830
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to bottom,
+            var(--primary),
+            #fdc830
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        z-index: 1;
+    }
+
     /* Card picture */
 
     .card-picture {
-        padding: 1rem;
+        position: absolute;
+        top: 0;
+        padding: 0.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        min-height: calc(200px + 2rem);
+        height: 120px;
+        width: 120px;
+        object-fit: contain;
+        border-radius: 1rem;
+        border: 1px solid var(--hover_2);
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 8px 0px;
     }
 
     .card-picture img {
-        width: 200px;
-        height: fit-content;
-        border: 0;
+        width: 100%;
+        height: auto;
     }
 
     /* Card data */
@@ -42,7 +80,6 @@ const {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 1.5rem;
     }
 
     /* Card header */
@@ -50,6 +87,7 @@ const {
     .card-header {
         display: flex;
         flex-direction: column;
+        gap: 0.25rem;
     }
 
     .card-header .job-title {
@@ -57,16 +95,17 @@ const {
     }
 
     .card-header .job-time {
-        color: var(--gray);
-        font-weight: 600;
-        font-size: 0.9rem;
+        color: var(--text_2);
+        font-weight: 500;
+        font-size: 0.83rem;
         margin-top: 0.4rem;
+        font-family: "JetBrains Mono", monospace;
     }
 
     .card-header .job-company {
         font-weight: 600;
         font-size: 0.9rem;
-        color: var(--primary_3);
+        color: var(--gray);
     }
 
     /* Job description */
@@ -92,7 +131,7 @@ const {
     .accordion-section {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         margin-bottom: 1.3rem;
     }
 
@@ -136,7 +175,8 @@ const {
         }
     }
 </style>
-<Card>
+<article class="card">
+    <span class="circle"></span>
     <div class="card-picture">
         <img
             src={`/jobs/${jobPicture}`}
@@ -144,7 +184,6 @@ const {
             loading="lazy"
         />
     </div>
-    <Divider />
     <div class="card-data">
         <div class="card-header">
             <h1 class="job-title">{jobTitle}</h1>
@@ -175,4 +214,4 @@ const {
         </div>
         <AccordionButton dataTarget={id} />
     </div>
-</Card>
+</article>

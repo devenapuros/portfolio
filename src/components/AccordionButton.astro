@@ -6,15 +6,15 @@ const { dataTarget } = Astro.props;
     /* Accordion button */
 
     .accordion-btn {
-        padding: 0;
+        padding: 0.25rem 0.5rem 0.25rem 0.3rem;
         width: fit-content;
         font-size: 13px;
         border-radius: 6px;
         gap: 0.35rem;
-        color: var(--primary_2);
-        background-color: transparent;
+        color: var(--text_2);
+        background-color: var(--hover);
     }
-    
+
     .accordion-btn span {
         /* font-weight: 400; */
         display: flex;
@@ -23,7 +23,7 @@ const { dataTarget } = Astro.props;
     }
 
     .accordion-btn svg {
-        stroke: var(--primary_2);
+        stroke: var(--text_2);
         transition: transform 100ms ease;
     }
 
