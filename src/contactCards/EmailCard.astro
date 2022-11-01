@@ -8,8 +8,18 @@
         padding: 1rem;
         width: 100%;
         border-radius: 11px;
-        background: var(--primary);
         overflow: hidden;
+        background: var(--primary); /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            to left,
+            var(--primary),
+            #fdc830
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to left,
+            var(--primary),
+            #fdc830
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
     li a {

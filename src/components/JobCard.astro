@@ -18,13 +18,12 @@ const {
 ---
 
 <style>
-    .card {
+    .job-card {
         position: relative;
         display: flex;
         flex-direction: column;
         padding: 0 1.5rem;
         gap: 1rem;
-        width: 50%;
     }
 
     .circle {
@@ -51,8 +50,7 @@ const {
 
     /* Card picture */
 
-    .card-picture {
-        position: absolute;
+    .job-picture {
         top: 0;
         padding: 0.5rem;
         display: flex;
@@ -64,19 +62,19 @@ const {
         width: 120px;
         object-fit: contain;
         border-radius: 1rem;
-        border: 1px solid var(--hover_2);
+        /* border: 1px solid var(--hover_2); */
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 8px 0px;
     }
 
-    .card-picture img {
+    .job-picture > img {
         width: 100%;
         height: auto;
     }
 
     /* Card data */
 
-    .card-data {
+    .job-data {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -110,7 +108,7 @@ const {
 
     /* Job description */
 
-    .card-data .description {
+    .job-data .description {
         margin: 1.3rem 0;
     }
 
@@ -175,16 +173,16 @@ const {
         }
     }
 </style>
-<article class="card">
+<article class="job-card">
     <span class="circle"></span>
-    <div class="card-picture">
+    <div class="job-picture">
         <img
             src={`/jobs/${jobPicture}`}
             alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
             loading="lazy"
         />
     </div>
-    <div class="card-data">
+    <div class="job-data">
         <div class="card-header">
             <h1 class="job-title">{jobTitle}</h1>
             <span class="job-company">{jobCompany}</span>

@@ -13,13 +13,6 @@
     --glass: #f8f9faaa;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
-
 body.dark {
     --background: #0a0a0a;
     --background_2: #0c0c0c;
@@ -36,11 +29,15 @@ body.dark {
 }
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
     scrollbar-width: thin;
     scrollbar-color: var(--gray) var(--background);
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     width: 12px;
 }
@@ -81,6 +78,7 @@ p {
     font-family: "Inter", sans-serif;
 }
 
+/* Reusable classes */
 .btn {
     padding: 0.9rem 1.7rem;
     display: flex;
@@ -120,35 +118,52 @@ p {
     color: var(--primary);
 }
 
+.gradient-text {
+    background: -webkit-linear-gradient(#fdc830, #f37335);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Media queries */
+
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 1.9rem;
     }
 }
 
-.jobs-container article:nth-child(2n) {
-    transform: translateX(100%);
-    padding-right: 0;
-}
+@media screen and (min-width: 768px) {
+    .jobs-container .job-card {
+        width: 50%;
+    }
 
-.jobs-container article:nth-child(2n + 1) {
-    padding-left: 0;
-}
+    .jobs-container .timeline {
+        left: 50%;
+    }
 
-.jobs-container article:nth-child(2n + 1) .card-picture {
-    left: calc(100% + 1.5rem);
-}
+    .jobs-container .job-picture {
+        position: absolute;
+    }
 
-.jobs-container article:nth-child(2n) .card-picture {
-    left: calc(-120px - 1.5rem);
-}
+    .jobs-container article:nth-child(2n) {
+        transform: translateX(100%);
+        padding-right: 0;
+    }
 
-.jobs-container article:nth-child(2n + 1) .circle {
-    left: calc(100% - 10px);
-}
+    .jobs-container article:nth-child(2n + 1) {
+        padding-left: 0;
+    }
 
-.gradient-text {
-    background: -webkit-linear-gradient(#fdc830, #f37335);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    .jobs-container article:nth-child(2n + 1) .job-picture {
+        left: calc(100% + 1.5rem);
+    }
+
+    .jobs-container article:nth-child(2n) .job-picture {
+        left: calc(-120px - 1.5rem);
+    }
+
+    .jobs-container article:nth-child(2n + 1) .circle {
+        left: calc(100% - 10px);
+    }
 }
