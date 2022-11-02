@@ -1,53 +1,12 @@
-<style>
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 34px;
-        width: 34px;
-        background-color: transparent;
-        border: 0;
-        border-radius: 8px;
-        transition: background-color 300ms ease;
-    }
-
-    button:hover {
-        cursor: pointer;
-        background-color: var(--hover);
-    }
-
-    button svg {
-        stroke: var(--text);
-    }
-
-    .sun {
-        display: none;
-    }
-
-    body.dark .moon {
-        display: none;
-    }
-
-    body.dark .sun {
-        display: block;
-    }
-
-    @media screen and (max-width: 850px) {
-        button svg {
-        height: 34px;
-        width: 34px;
-    }
-    }
-</style>
-<button id="theme-toggle">
+<button class="theme-toggle" id="theme-toggle">
     <svg
         class="moon"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
-        width="23"
-        height="23"
+        width="22"
+        height="22"
     >
         <path
             stroke-linecap="round"

@@ -1,105 +1,8 @@
----
-import ThemeToggle from "./themeToggle.astro";
----
-
-<style>
-    ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        gap: 1.3rem;
-    }
-
-    li {
-        font-size: 0.87rem;
-        font-weight: 500;
-    }
-
-    li a {
-        padding: 0 1px;
-        color: var(--gray);
-        text-decoration: none;
-        transition: color 300ms ease;
-    }
-
-    li a:hover {
-        text-decoration: none;
-        color: var(--text);
-    }
-
-    li.active a {
-        color: var(--text);
-    }
-
-    .menu-btn {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        padding: 0.3rem;
-        border-radius: 6px;
-        stroke: var(--text);
-        background-color: transparent;
-        border: 0;
-        z-index: 1;
-    }
-
-    .menu-btn svg {
-        stroke: var(--text);
-    }
-
-    .menu-btn:hover {
-        cursor: pointer;
-        background-color: var(--hover);
-    }
-
-    .menu-btn .close-icon {
-        display: none;
-    }
-
-    @media screen and (max-width: 850px) {
-        ul {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            gap: 2.5rem;
-            flex-direction: column;
-            background-color: var(--background);
-            z-index: 3;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        ul li {
-            font-size: 1.35rem;
-        }
-
-        ul.menu-expanded {
-            display: flex;
-        }
-
-        .menu-btn {
-            display: flex;
-            z-index: 3;
-        }
-
-        .menu-btn.menu-expanded .menu-icon {
-            display: none;
-        }
-
-        .menu-btn.menu-expanded .close-icon {
-            display: flex;
-        }
-    }
-</style>
-<ul id="topbar-menu">
-    <li class="active"><a href="">Inicio</a></li>
-    <li><a href="">Experiencia</a></li>
-    <li><a href="">Proyectos</a></li>
-    <li><a href="">Educación</a></li>
-    <li><a href="">Contacto</a></li>
+<ul class="topbar-menu" id="topbar-menu">
+    <li class="menu-item"><a href="">Experiencia</a></li>
+    <li class="menu-item"><a href="">Proyectos</a></li>
+    <li class="menu-item"><a href="">Educación</a></li>
+    <li class="menu-item"><a href="">Contacto</a></li>
 </ul>
 <button class="menu-btn" id="menu-btn">
     <svg
@@ -108,8 +11,8 @@ import ThemeToggle from "./themeToggle.astro";
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
-        height="28"
-        width="28"
+        height="26"
+        width="26"
     >
         <path
             stroke-linecap="round"
@@ -124,7 +27,6 @@ import ThemeToggle from "./themeToggle.astro";
         stroke-width="1.5"
         height="28"
         width="28"
-        
     >
         <path
             stroke-linecap="round"
@@ -136,7 +38,7 @@ import ThemeToggle from "./themeToggle.astro";
     const $menu = document.getElementById("topbar-menu");
     const $menuBtn = document.getElementById("menu-btn");
     $menuBtn.addEventListener("click", (event) => {
-        $menu.classList.toggle("menu-expanded");
-        $menuBtn.classList.toggle("menu-expanded");
+        $menu.classList.toggle("expanded");
+        $menuBtn.classList.toggle("expanded");
     });
 </script>

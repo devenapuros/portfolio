@@ -4,37 +4,8 @@ import Menu from "./menu.astro";
 import ThemeToggle from "./themeToggle.astro";
 ---
 
-<style>
-    nav {
-        /* position: sticky;
-        top: 0; */
-        /* background-color: var(--glass); */
-        /* backdrop-filter: blur(8px);
-        z-index: 1; */
-    }
-
-    .bordered {
-        border-bottom: 1px solid var(--hover);
-    }
-
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-        width: 866px;
-        margin: 0 auto;
-    }
-
-    @media screen and (max-width: 900px) {
-        .nav-container {
-            width: 90vw;
-        }
-    }
-</style>
-
 <nav id="topbar">
-    <div class="nav-container">
+    <div class="topbar-container">
         <Logo />
         <Menu />
         <ThemeToggle />

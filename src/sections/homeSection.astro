@@ -1,64 +1,4 @@
 <style>
-    section {
-        height: calc(100vh - 4rem);
-        min-height: 580px;
-        padding: 2.5rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 3.5em;
-    }
-
-    .name {
-        font-size: 2rem !important;
-        color: var(--gray);
-    }
-
-    .slogan {
-        font-size: 3.4rem;
-        font-weight: 800;
-        color: var(--text);
-        line-height: 1;
-        width: 90%;
-    }
-
-    ul {
-        display: flex;
-        align-items: center;
-        gap: 7.2rem;
-    }
-
-    li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        text-align: center;
-        gap: 0.4rem;
-        color: var(--text_2);
-    }
-
-    li .counter {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 1.5rem;
-        color: var(--text);
-        font-weight: 700;
-    }
-
-    li .counter svg {
-        stroke: var(--gray);
-    }
-
-    li .label {
-        line-height: 1;
-        font-size: 0.8rem;
-        font-family: "JetBrains Mono", monospace;
-    }
-
     .button-group {
         display: flex;
         align-items: center;
@@ -71,18 +11,6 @@
     }
 
     @media screen and (max-width: 600px) {
-        .name {
-            font-size: 1.2rem;
-        }
-
-        .slogan {
-            font-size: 2.5rem;
-        }
-
-        ul {
-            gap: 2rem;
-        }
-
         .button-group {
             gap: 1rem;
         }
@@ -107,15 +35,16 @@
         }
     }
 </style>
-<section>
-    <h1 class="name">Hola! soy Daniel Gómez.</h1>
+<section class="main-section">
+    <h1 class="name">Hola! Soy Daniel Gómez.</h1>
     <h2 class="slogan">
         Desarrollador con pasión por construir sitios web <br /><span
-            class="gradient-text">memorables</span>.
+            class="gradient-text">memorables</span
+        >.
     </h2>
 
-    <ul>
-        <li>
+    <ul class="highlights-list">
+        <li class="highlight">
             <span class="counter">
                 2
                 <svg
@@ -136,7 +65,7 @@
             </span>
             <span class="label">Años de<br />experiencia</span>
         </li>
-        <li>
+        <li class="highlight">
             <span class="counter">
                 100k
                 <svg
@@ -156,7 +85,7 @@
             </span>
             <span class="label">Lineas de <br />código escritas</span>
         </li>
-        <li>
+        <li class="highlight">
             <span class="counter">
                 1.2k
                 <svg
