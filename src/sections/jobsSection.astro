@@ -1,34 +1,12 @@
 ---
 import JobCard from "../components/JobCard.astro";
 import jobs from "../data/jobs.json";
+import "../styles/jobs-section.css";
 ---
 
-<style>
-    section {
-        padding: 3rem 0 4rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .jobs-container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-    }
-
-    .timeline {
-        position: absolute;
-        left: 0;
-        border-left: 1px dashed var(--gray);
-        height: 100%;
-        z-index: -1;
-    }
-</style>
-<section>
+<section class="jobs-section">
     <h1>Experiencia<span class="primary-text">.</span></h1>
-    <div class="jobs-container">
+    <div class="jobs-grid">
         {jobs.map((job) => <JobCard {...job} />)}
         <div class="timeline"></div>
     </div>

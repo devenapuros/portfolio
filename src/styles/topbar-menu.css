@@ -1,0 +1,75 @@
+/* TOPBAR MENU */
+
+.topbar-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+}
+
+.topbar-menu.expanded {
+    display: flex;
+    gap: 4rem;
+}
+
+.topbar-menu > .menu-item > a {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 300ms ease, background-color 300ms ease;
+    border-radius: 6px;
+}
+
+.topbar-menu.expanded > .menu-item > a {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.topbar-menu > .menu-item > a:hover {
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--hover);
+}
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    border-radius: 6px;
+    stroke: var(--text);
+    background-color: transparent;
+    border: 0;
+    z-index: 1;
+}
+
+.menu-btn svg {
+    stroke: var(--text);
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+.menu-btn .close-icon {
+    display: none;
+}
+
+.menu-btn.expanded .close-icon {
+    display: flex;
+}
+
+.menu-btn.expanded .menu-icon {
+    display: none;
+}

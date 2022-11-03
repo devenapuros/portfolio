@@ -1,7 +1,5 @@
 ---
-import Card from "./Card.astro";
-import Divider from "./Divider.astro";
-import TechItem from "./TechItem.astro";
+import "../styles/education-card.css";
 
 const {
     id,
@@ -13,94 +11,16 @@ const {
 } = Astro.props;
 ---
 
-<style>
-    /* Card picture */
-
-    .card-picture {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .card-picture img {
-        width: 220px;
-        height: fit-content;
-        border-radius: 0.35rem;
-    }
-
-    /* Card data */
-
-    .card-data {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
-
-    /* Card header */
-
-    .card-header {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-    }
-
-    .card-header .education-title {
-        font-size: 1.45rem;
-    }
-
-    .card-header .education-time {
-        color: var(--gray);
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
-    .card-header .education-company {
-        color: var(--primary_3);
-        font-weight: 600;
-        font-size: 1rem;
-        margin-top: 0.3rem;
-    }
-
-    .education-link {
-        width: fit-content;
-        padding: 0.4rem 1rem;
-        background-color: var(--hover);
-        border-radius: 48px;
-        color: var(--text);
-        text-decoration: none;
-        font-size: 0.8125rem;
-        font-weight: 400;
-        gap: 0.4rem;
-    }
-
-    .education-link svg {
-        stroke: var(--text);
-    }
-
-    .education-link:hover {
-        text-decoration: underline var(--primary);
-    }
-
-    @media screen and (max-width: 668px) {
-        .card-header .education-title {
-            font-size: 1.2rem;
-        }
-    }
-</style>
-<Card>
-    <div class="card-picture">
+<article class="education-card">
+    <span class="circle"></span>
+    <div class="education-picture">
         <img
             src={`/education/${educationPicture}`}
             alt={`Picture of ${educationTitle} degree`}
         />
     </div>
-    <Divider />
-    <div class="card-data">
-        <div class="card-header">
+    <div class="education-data">
+        <div class="education-header">
             <h1 class="education-title">{educationTitle}</h1>
             <span class="education-time">{educationTime}</span>
             <span class="education-company">{educationCompany}</span>
@@ -131,4 +51,4 @@ const {
             )
         }
     </div>
-</Card>
+</article>

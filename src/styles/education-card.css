@@ -1,0 +1,119 @@
+.education-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    gap: 1rem;
+    min-height: 120px;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background: var(--primary); /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to bottom,
+        var(--primary),
+        #fdc830
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        var(--primary),
+        #fdc830
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    z-index: 1;
+}
+
+/* Card picture */
+
+.education-picture {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.education-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+/* Education data */
+
+.education-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Card header */
+
+.education-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.education-header .education-title {
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.education-header .education-time {
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.education-company {
+    color: var(--text_2);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}
+
+.education-link {
+    padding: 0.35rem 0.55rem 0.35rem 0.4rem;
+    width: fit-content;
+    font-size: 13px;
+    border-radius: 6px;
+    gap: 0.35rem;
+    color: var(--text_2);
+    background-color: var(--hover);
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+.education-link svg {
+    stroke: var(--text_2);
+    transition: all 100ms ease;
+}
+
+.education-link:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+.education-link:hover svg {
+    stroke: var(--background);
+}
+
+@media screen and (max-width: 668px) {
+    .card-header .education-title {
+        font-size: 1.2rem;
+    }
+}

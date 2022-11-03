@@ -1,0 +1,59 @@
+/* LOGO */
+
+.square-logo {
+    display: none;
+    height: 30px;
+    width: 30px;
+    aspect-ratio: 1/1;
+    background-color: var(--primary);
+    border-radius: 8px;
+}
+
+/* TOPBAR */
+
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 601px) {
+    .square-logo {
+        display: block;
+    }
+
+    .topbar-menu,
+    .topbar-menu.expanded {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        gap: 1rem;
+    }
+
+    .topbar-menu > .menu-item > a,
+    .topbar-menu.expanded > .menu-item > a {
+        font-size: 0.87rem;
+        font-weight: 500;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .topbar-menu,
+    .topbar-menu.expanded {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .topbar-container {
+        width: 866px;
+    }
+}

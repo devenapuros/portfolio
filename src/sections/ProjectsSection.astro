@@ -11,8 +11,16 @@ import projects from "../data/projects.json";
         flex-direction: column;
         gap: 3rem;
     }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
 </style>
 <section>
     <h1>Proyectos<span class="primary-text">.</span></h1>
-    {projects.map((project) => <ProjectCard {...project} />)}
+    <div class="projects-grid">
+        {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
 </section>

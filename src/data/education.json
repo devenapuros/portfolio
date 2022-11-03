@@ -1,19 +1,11 @@
 [
     {
         "id": "mongodb-001-basics",
-        "educationPicture": "m001-mongodb.jpg",
+        "educationPicture": "M001.png",
         "educationTitle": "M001: MongoDB Basics",
         "educationTime": "Octubre 2022",
         "educationCompany": "MongoDB University",
         "educationLink": "https://university.mongodb.com/course_completion/6211a6ca-8869-4940-b9e1-bccdc01952a5?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-    },
-    {
-        "id": "oracle-cloud-foundations",
-        "educationPicture": "oracle.jpg",
-        "educationTitle": "Oracle Cloud Infrastructure Foundations 2021 Associate",
-        "educationTime": "Noviembre 2021",
-        "educationCompany": "Oracle University",
-        "educationLink": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=1D5F9D23E79E1FAED940FC671985E76F68285180E83F857938890DED2AC18E13"
     },
     {
         "id": "fiuaemex-engineering",
@@ -21,5 +13,13 @@
         "educationTitle": "Pasante de Ingeniería en Computación",
         "educationTime": "Diciembre 2021",
         "educationCompany": "Universidad Autónoma del Estado de México"
+    },
+    {
+        "id": "oracle-cloud-foundations",
+        "educationPicture": "oracle.png",
+        "educationTitle": "Oracle Cloud Infrastructure Foundations 2021 Associate",
+        "educationTime": "Noviembre 2021",
+        "educationCompany": "Oracle University",
+        "educationLink": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=1D5F9D23E79E1FAED940FC671985E76F68285180E83F857938890DED2AC18E13"
     }
 ]

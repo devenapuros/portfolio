@@ -1,41 +1,8 @@
-<style>
-    .button-group {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
+---
+import "../styles/home-section.css";
+---
 
-    .button-group a {
-        width: 16rem;
-        text-decoration: none;
-    }
-
-    @media screen and (max-width: 600px) {
-        .button-group {
-            gap: 1rem;
-        }
-
-        li {
-            display: flex;
-            flex-direction: column;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-        }
-
-        .primary-btn {
-            width: fit-content !important;
-        }
-
-        .secondary-btn {
-            width: fit-content !important;
-        }
-
-        .secondary-btn span {
-            display: none;
-        }
-    }
-</style>
-<section class="main-section">
+<section class="home-section">
     <h1 class="name">Hola! Soy Daniel Gómez.</h1>
     <h2 class="slogan">
         Desarrollador con pasión por construir sitios web <br /><span
@@ -43,8 +10,8 @@
         >.
     </h2>
 
-    <ul class="highlights-list">
-        <li class="highlight">
+    <ul class="stats-list">
+        <li class="stat">
             <span class="counter">
                 2
                 <svg
@@ -65,7 +32,7 @@
             </span>
             <span class="label">Años de<br />experiencia</span>
         </li>
-        <li class="highlight">
+        <li class="stat">
             <span class="counter">
                 100k
                 <svg
@@ -85,7 +52,7 @@
             </span>
             <span class="label">Lineas de <br />código escritas</span>
         </li>
-        <li class="highlight">
+        <li class="stat">
             <span class="counter">
                 1.2k
                 <svg

@@ -1,7 +1,5 @@
 ---
 import AccordionButton from "./AccordionButton.astro";
-import Card from "./Card.astro";
-import Divider from "./Divider.astro";
 import TechItem from "./TechItem.astro";
 
 const {
@@ -12,23 +10,38 @@ const {
     projectSite,
     projectDescription,
     projectTechnologies,
+    projectSlogan,
 } = Astro.props;
 ---
 
 <style>
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        overflow: hidden;
+        gap: 0.5rem;
+    }
+
     .card-picture {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 200px;
-        padding: 1.5rem;
-        gap: 1rem;
+        border-radius: 13px;
+        overflow: hidden;
+        /* aspect-ratio: 1/1; */
     }
 
     .card-picture img {
-        width: 200px;
+        width: 100%;
         height: fit-content;
+        transition: all 300ms ease;
+    }
+
+    .card-picture:hover img {
+        width: 105%;
+        cursor: pointer;
     }
 
     /* Card data */
@@ -37,35 +50,33 @@ const {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 1.5rem;
     }
 
     /* Card header */
 
     .card-header {
         display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .card-header .project-title {
-        font-size: 1.45rem;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .project-links {
         display: flex;
-        gap: 0.8rem;
+        gap: 0.5rem;
     }
 
     .project-links .btn {
-        padding: 0.4rem 1rem;
-        background-color: var(--hover);
+        padding: 7px;
         border-radius: 6px;
         color: var(--text_2);
         text-decoration: none;
-        font-size: 0.8125rem;
-        font-weight: 400;
-        gap: 0.4rem;
         transition: all 300ms ease;
     }
 
@@ -86,7 +97,10 @@ const {
     /* Job description */
 
     .card-data .description {
-        margin: 1.3rem 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: var(--gray);
     }
 
     /* Accordion */
@@ -146,14 +160,13 @@ const {
         }
     }
 </style>
-<Card>
+<acticle class="project-card">
     <div class="card-picture">
         <img
             src={`/projects/${projectPicture}`}
             alt={`Logo of ${projectTitle} project`}
         />
     </div>
-    <Divider />
     <div class="card-data">
         <div class="card-header">
             <h1 class="project-title">{projectTitle}</h1>
@@ -163,8 +176,8 @@ const {
                         <a href={projectRepo} class="btn" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
+                                width="21"
+                                height="21"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke-width="1.5"
@@ -174,7 +187,6 @@ const {
                             >
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                             </svg>
-                            GitHub
                         </a>
                     )
                 }
@@ -186,22 +198,22 @@ const {
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke-width="1.5"
-                                height="20"
-                                width="20"
+                                height="21"
+                                width="21"
                             >
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                                 />
                             </svg>
-                            Ir al sitio
                         </a>
                     )
                 }
             </div>
         </div>
-        <p class="description">{projectDescription}</p>
+        <small class="description">{projectSlogan}</small>
+        <!-- 
         <div class="accordion" id={`accordion-${id}`}>
             <div class="accordion-section">
                 <span class="accordion-title">Tecnologías</span>
@@ -217,6 +229,6 @@ const {
                 </ul>
             </div>
         </div>
-        <AccordionButton dataTarget={id} />
+        <AccordionButton dataTarget={id} /> -->
     </div>
-</Card>
+</acticle>

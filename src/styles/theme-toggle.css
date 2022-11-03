@@ -1,0 +1,34 @@
+/* THEME TOGGLE */
+
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    width: 34px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    transition: background-color 300ms ease;
+}
+
+.theme-toggle svg {
+    stroke: var(--text);
+}
+
+.theme-toggle:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+.theme-toggle .sun {
+    display: none;
+}
+
+body.dark .theme-toggle .moon {
+    display: none;
+}
+
+body.dark .theme-toggle .sun {
+    display: block;
+}

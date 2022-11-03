@@ -1,17 +1,13 @@
 ---
 import EducationCard from "../components/EducationCard.astro";
 import educationDegrees from "../data/education.json";
+import "../styles/education-section.css";
 ---
 
-<style>
-    section {
-        padding: 3rem 0 4rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-</style>
-<section>
+<section class="education-section">
     <h1>Educación<span class="primary-text">.</span></h1>
-    {educationDegrees.map((education) => <EducationCard {...education} />)}
+    <div class="education-grid">
+        {educationDegrees.map((education) => <EducationCard {...education} />)}
+        <div class="timeline"></div>
+    </div>
 </section>

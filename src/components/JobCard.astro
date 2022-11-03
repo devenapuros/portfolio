@@ -22,7 +22,7 @@ const {
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 0 1.5rem;
+        padding-left: 1.5rem;
         gap: 1rem;
     }
 
@@ -62,9 +62,7 @@ const {
         width: 120px;
         object-fit: contain;
         border-radius: 1rem;
-        /* border: 1px solid var(--hover_2); */
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 8px 0px;
+        background-color: #fff;
     }
 
     .job-picture > img {
@@ -88,19 +86,19 @@ const {
         gap: 0.25rem;
     }
 
-    .card-header .job-title {
+    .job-title {
         font-size: 1.45rem;
+        /* color: var(--text_2); */
     }
 
-    .card-header .job-time {
+    .job-time {
         color: var(--text_2);
         font-weight: 500;
-        font-size: 0.83rem;
-        margin-top: 0.4rem;
-        font-family: "JetBrains Mono", monospace;
+        font-size: 0.87rem;
+        margin-top: 0.5rem;
     }
 
-    .card-header .job-company {
+    .job-company {
         font-weight: 600;
         font-size: 0.9rem;
         color: var(--gray);
