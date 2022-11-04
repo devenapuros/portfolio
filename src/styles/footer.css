@@ -1,22 +1,18 @@
-footer {
+.footer {
     display: flex;
     align-items: center;
     padding: 1rem;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    width: 866px;
-    margin: 0 auto;
-    border-top: 1px solid var(--hover);
-}
-
 .footer-row {
     display: flex;
-    padding: 3rem 3rem 3rem;
+    flex-direction: column;
+    padding: 2rem 1rem;
     width: 100%;
     gap: 3rem;
+    border-top: 1px solid var(--hover_2);
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .footer-section {
@@ -26,7 +22,6 @@ footer {
 
 .brand-section {
     gap: 1rem;
-    width: 60%;
 }
 
 .brand-section .logo-container {
@@ -34,7 +29,7 @@ footer {
     align-items: center;
     gap: 0.5rem;
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text);
 }
 
@@ -69,4 +64,22 @@ footer {
     color: var(--gray);
     font-size: 0.87rem;
     margin: 1rem auto;
+}
+
+@media screen and (min-width: 480px) {
+    .footer-row {
+        flex-direction: row;
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    .brand-section {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .footer-row {
+        width: 866px;
+    }
 }

@@ -1,0 +1,32 @@
+.contact-section {
+    padding: 3rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-links {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+.contact-links .link {
+    padding: 1.35rem;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-links .link {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .contact-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

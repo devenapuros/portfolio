@@ -4,27 +4,24 @@ import SpotifyWidget from "./SpotifyWidget.astro";
 import "../styles/footer.css";
 ---
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-row">
-            <section class="footer-section brand-section">
-                <div class="logo-container">
-                    <Logo />Francisco Daniel Gómez Álvarez
-                </div>
-                <span class="my-slogan">
-                    Desarrollador con pasión por construir sitios web
-                    memorables.
-                </span>
-                <SpotifyWidget />
-            </section>
-            <section class="footer-section links-section">
-                <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Experiencia</a></li>
-                    <li><a href="">Proyectos</a></li>
-                    <li><a href="">Educación</a></li>
-                </ul>
-            </section>
-        </div>
+<footer class="footer">
+    <div class="footer-row">
+        <section class="footer-section brand-section">
+            <div class="logo-container">
+                <Logo />Francisco Daniel Gómez Álvarez
+            </div>
+            <span class="my-slogan">
+                Desarrollador con pasión por construir sitios web memorables.
+            </span>
+            <SpotifyWidget />
+        </section>
+        <section class="footer-section links-section">
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Experiencia</a></li>
+                <li><a href="">Proyectos</a></li>
+                <li><a href="">Educación</a></li>
+            </ul>
+        </section>
     </div>
 </footer>

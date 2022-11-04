@@ -2,56 +2,10 @@
 import EmailCard from "../contactCards/EmailCard.astro";
 import GithubCard from "../contactCards/GithubCard.astro";
 import LinkedinCard from "../contactCards/LinkedinCard.astro";
+import "../styles/contact-section.css";
 ---
 
-<style>
-    section {
-        padding: 3rem 0 5rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .contact-links {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-    }
-
-    .contact-links li {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-        font-size: 0.88rem;
-        color: var(--text_2);
-    }
-
-    .contact-links li a {
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-        color: var(--text);
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-    .contact-links li a:hover {
-        text-decoration: underline var(--primary);
-    }
-
-    .secondary-btn {
-        width: fit-content;
-        text-decoration: none;
-    }
-
-    @media screen and (max-width: 800px) {
-        .contact-links {
-            flex-direction: column;
-        }
-    }
-</style>
-<section>
+<section class="contact-section">
     <h1>Contacto<span class="primary-text">.</span></h1>
     <ul class="contact-links">
         <EmailCard />
