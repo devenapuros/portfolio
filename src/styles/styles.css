@@ -145,9 +145,18 @@ p {
     }
 }
 
+@media screen and (min-width:600px) {
+    .main-container {
+        width: 93vw;
+    }
+}
+
 @media screen and (min-width: 769px) {
     h1 {
         font-size: 2rem;
+    }
+    main-container {
+        width: 90vw;
     }
 }
 

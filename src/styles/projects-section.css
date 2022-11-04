@@ -7,14 +7,15 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 100%;
     column-gap: 1.8rem;
-    row-gap: 4rem;
+    row-gap: 3rem;
 }
 
 @media screen and (min-width: 600px) {
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
         row-gap: 3rem;
     }
 }
