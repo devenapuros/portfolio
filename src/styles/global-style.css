@@ -8,10 +8,8 @@
     --hover: #00000010;
     --hover_2: #00000018;
     --primary: #ffa200;
-    --secondary: #111;
-    --primary_2: #d04300;
-    --primary_3: #b21e35;
-    --glass: #f8f9faaa;
+    --primary_2: #ffb028;
+    --secondary: #1c1c1c;
 }
 
 body.dark {
@@ -24,10 +22,8 @@ body.dark {
     --hover: #ffffff18;
     --hover_2: #ffffff0e;
     --primary: #ffb200;
-    --primary_2: #e87742;
-    --primary_3: #f25c54;
-    --secondary: #ffffff;
-    --glass: #0b0e14bb;
+    --primary_2: #ffb028;
+    --secondary: #fff;
 }
 
 * {
@@ -95,6 +91,7 @@ p {
     outline: none;
     border-radius: 1rem;
     font-size: 0.93rem;
+    transition: background-color 300ms ease;
 }
 
 .btn:hover {
@@ -111,6 +108,10 @@ p {
     stroke: #111;
 }
 
+.primary-btn:hover {
+    background-color: var(--primary_2);
+}
+
 .secondary-btn {
     background-color: var(--text);
     color: var(--background);
@@ -119,6 +120,10 @@ p {
 
 .secondary-btn svg {
     stroke: var(--background);
+}
+
+.secondary-btn:hover {
+    background-color: var(--secondary);
 }
 
 .primary-text {
