@@ -1,7 +1,87 @@
 [
     {
-        "skillName": "Trabajo en equipo",
-        "skillDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quo numquam ipsa? Porro veritatis accusamus libero vero et provident ex dolores nisi! Iure molestiae necessitatibus incidunt reiciendis praesentium facilis earum!",
-        "skillPicture": "team.svg"
+        "skillName": "HTML",
+        "skillPicture": "html.svg"
+    },
+    {
+        "skillName": "CSS",
+        "skillPicture": "css.svg"
+    },
+    {
+        "skillName": "JavaScript",
+        "skillPicture": "javascript.svg"
+    },
+    {
+        "skillName": "React.js",
+        "skillPicture": "react.svg"
+    },
+    {
+        "skillName": "Styled Components",
+        "skillPicture": "styledcomponents.svg"
+    },
+    {
+        "skillName": "Bootstrap",
+        "skillPicture": "bootstrap.svg"
+    },
+    {
+        "skillName": "JQuery",
+        "skillPicture": "jquery.svg"
+    },
+    {
+        "skillName": "Node.js",
+        "skillPicture": "node.svg"
+    },
+    {
+        "skillName": "Express",
+        "skillPicture": "express.svg"
+    },
+    {
+        "skillName": "MySQL",
+        "skillPicture": "mysql.svg"
+    },
+    {
+        "skillName": "MariaDB",
+        "skillPicture": "mariadb.svg"
+    },
+    {
+        "skillName": "PostgreSQL",
+        "skillPicture": "postgresql.svg"
+    },
+    
+    {
+        "skillName": "MongoDB",
+        "skillPicture": "mongodb.svg"
+    },
+    {
+        "skillName": "Sequelize",
+        "skillPicture": "sequelize.svg"
+    },
+    {
+        "skillName": "Astro",
+        "skillPicture": "astro.svg"
+    },
+    {
+        "skillName": "Netlify",
+        "skillPicture": "netlify.svg"
+    },
+    {
+        "skillName": "Linux",
+        "skillPicture": "linux.svg"
+    },
+    {
+        "skillName": "VS Code",
+        "skillPicture": "vscode.svg"
+    },
+    {
+        "skillName": "Git",
+        "skillPicture": "git.svg"
+    },
+    {
+        "skillName": "Github",
+        "skillPicture": "github.svg"
+    },
+    {
+        "skillName": "Gitlab",
+        "skillPicture": "gitlab.svg"
     }
 ]
