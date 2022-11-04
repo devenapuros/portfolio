@@ -1,0 +1,42 @@
+.about-section {
+    padding: 2rem 0 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-article .about-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-article .secondary-btn {
+    width: fit-content;
+    text-decoration: none;
+}
+
+.about-profile-photo {
+    border-radius: 100%;
+    height: 210px;
+    width: 210px;
+}
+
+@media screen and (max-width: 600px) {
+    .about-section {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .about-profile-photo {
+        height: 170px;
+        width: 170px;
+    }
+}

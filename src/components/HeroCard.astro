@@ -1,5 +1,4 @@
 ---
-import Card from "./Card.astro";
 const { heroName, heroDescription, heroPicture } = Astro.props;
 ---
 
@@ -45,7 +44,7 @@ const { heroName, heroDescription, heroPicture } = Astro.props;
         }
     }
 </style>
-<Card>
+<article>
     <div class="card-body">
         <div class="hero-picture">
             <img src={`/heros/${heroPicture}`} alt={heroName} loading="lazy" />
@@ -53,4 +52,4 @@ const { heroName, heroDescription, heroPicture } = Astro.props;
         <h1 class="hero-name">{heroName}</h1>
         <p class="hero-description">{heroDescription}</p>
     </div>
-</Card>
+</article>

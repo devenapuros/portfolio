@@ -83,5 +83,9 @@
     {
         "skillName": "Gitlab",
         "skillPicture": "gitlab.svg"
+    },
+    {
+        "skillName": "NPM",
+        "skillPicture": "npm.svg"
     }
 ]
