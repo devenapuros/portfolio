@@ -4,7 +4,7 @@ import educationDegrees from "../data/education.json";
 import "../styles/education-section.css";
 ---
 
-<section class="education-section">
+<section class="education-section" id="education">
     <h1>Educación<span class="primary-text">.</span></h1>
     <div class="education-grid">
         {educationDegrees.map((education) => <EducationCard {...education} />)}

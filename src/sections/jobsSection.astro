@@ -4,7 +4,7 @@ import jobs from "../data/jobs.json";
 import "../styles/jobs-section.css";
 ---
 
-<section class="jobs-section">
+<section class="jobs-section" id="jobs">
     <h1>Experiencia<span class="primary-text">.</span></h1>
     <div class="jobs-grid">
         {jobs.map((job) => <JobCard {...job} />)}

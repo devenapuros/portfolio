@@ -4,7 +4,7 @@ import projects from "../data/projects.json";
 import "../styles/projects-section.css";
 ---
 
-<section class="projects-section">
+<section class="projects-section" id="projects">
     <h1>Proyectos<span class="primary-text">.</span></h1>
     <div class="projects-grid">
         {projects.map((project) => <ProjectCard {...project} />)}

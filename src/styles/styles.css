@@ -39,6 +39,7 @@ body.dark {
         "Helvetica Neue", sans-serif;
     scrollbar-width: thin;
     scrollbar-color: var(--gray) var(--background);
+    scroll-behavior: smooth;
 }
 
 /* Chrome, Edge, and Safari */
@@ -93,7 +94,6 @@ p {
     border: 0;
     outline: none;
     border-radius: 1rem;
-    font-weight: 600;
     font-size: 0.93rem;
 }
 
@@ -104,6 +104,7 @@ p {
 .primary-btn {
     background-color: var(--primary);
     color: #111;
+    font-weight: 800;
 }
 
 .primary-btn svg {
@@ -113,6 +114,7 @@ p {
 .secondary-btn {
     background-color: var(--text);
     color: var(--background);
+    font-weight: 600;
 }
 
 .secondary-btn svg {
