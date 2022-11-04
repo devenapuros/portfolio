@@ -1,0 +1,27 @@
+.projects-section {
+    padding: 3rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.8rem;
+    row-gap: 4rem;
+}
+
+@media screen and (min-width: 600px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .projects-grid {
+        column-gap: 3rem;
+        row-gap: 3rem;
+    }
+}

@@ -1,166 +1,16 @@
 ---
-import AccordionButton from "./AccordionButton.astro";
-import TechItem from "./TechItem.astro";
-
+import "../styles/project-card.css";
 const {
     id,
     projectPicture,
     projectTitle,
     projectRepo,
     projectSite,
-    projectDescription,
-    projectTechnologies,
     projectSlogan,
 } = Astro.props;
 ---
 
-<style>
-    .project-card {
-        display: flex;
-        flex-direction: column;
-        background-color: transparent;
-        overflow: hidden;
-        gap: 0.5rem;
-    }
-
-    .card-picture {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 13px;
-        overflow: hidden;
-        /* aspect-ratio: 1/1; */
-    }
-
-    .card-picture img {
-        width: 100%;
-        height: fit-content;
-        transition: all 300ms ease;
-    }
-
-    .card-picture:hover img {
-        width: 105%;
-        cursor: pointer;
-    }
-
-    /* Card data */
-
-    .card-data {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* Card header */
-
-    .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .card-header .project-title {
-        font-size: 1.2rem;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-
-    .project-links {
-        display: flex;
-        gap: 0.5rem;
-    }
-
-    .project-links .btn {
-        padding: 7px;
-        border-radius: 6px;
-        color: var(--text_2);
-        text-decoration: none;
-        transition: all 300ms ease;
-    }
-
-    .project-links .btn svg {
-        stroke: var(--text_2);
-        transition: 300ms ease;
-    }
-
-    .project-links .btn:hover {
-        background-color: var(--text);
-        color: var(--background);
-    }
-
-    .project-links .btn:hover svg {
-        stroke: var(--background);
-    }
-
-    /* Job description */
-
-    .card-data .description {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        color: var(--gray);
-    }
-
-    /* Accordion */
-
-    .accordion {
-        flex-direction: column;
-        max-height: 0;
-        display: flex;
-        overflow: hidden;
-        transition: all 350ms ease;
-    }
-
-    .accordion.expanded {
-        max-height: 500px;
-    }
-
-    .accordion-section {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-bottom: 1.3rem;
-    }
-
-    .accordion-section ul {
-        list-style: outside;
-        color: var(--text_2);
-        font-size: 0.9rem;
-        margin-left: 1rem;
-    }
-
-    .accordion-title {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--text);
-    }
-
-    /* Tech list */
-
-    .tech-list {
-        display: flex;
-        list-style: none;
-        column-gap: 1.1rem;
-        row-gap: 0.45rem;
-        width: 95%;
-        flex-wrap: wrap;
-        margin-left: 0 !important;
-        white-space: nowrap;
-    }
-
-    @media screen and (max-width: 668px) {
-        .card-data {
-            padding: 1rem;
-        }
-
-        .card-header .project-title {
-            font-size: 1.2rem;
-        }
-    }
-</style>
-<acticle class="project-card">
+<article class="project-card">
     <div class="card-picture">
         <img
             src={`/projects/${projectPicture}`}
@@ -169,7 +19,10 @@ const {
     </div>
     <div class="card-data">
         <div class="card-header">
-            <h1 class="project-title">{projectTitle}</h1>
+            <div>
+                <h1 class="project-title">{projectTitle}</h1>
+                <small class="description">{projectSlogan}</small>
+            </div>
             <div class="project-links">
                 {
                     projectRepo && (
@@ -212,23 +65,5 @@ const {
                 }
             </div>
         </div>
-        <small class="description">{projectSlogan}</small>
-        <!-- 
-        <div class="accordion" id={`accordion-${id}`}>
-            <div class="accordion-section">
-                <span class="accordion-title">Tecnologías</span>
-                <ul class="tech-list">
-                    {
-                        projectTechnologies.map((technology) => (
-                            <TechItem
-                                name={technology.name}
-                                icon={technology.icon}
-                            />
-                        ))
-                    }
-                </ul>
-            </div>
-        </div>
-        <AccordionButton dataTarget={id} /> -->
     </div>
-</acticle>
+</article>

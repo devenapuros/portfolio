@@ -1,40 +1,30 @@
-<style>
-    footer {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        background-color: var(--hover);
-    }
+---
+import Logo from "./logo.astro";
+import SpotifyWidget from "./SpotifyWidget.astro";
+import "../styles/footer.css";
+---
 
-    .footer-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 866px;
-        margin: 0 auto;
-        color: var(--gray);
-        font-size: 0.9rem;
-    }
-
-    ul li a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        font-weight: 500;
-        gap: 0.35rem;
-        color: var(--text);
-    }
-    @media screen and (max-width: 900px) {
-        .footer-container {
-            width: 95vw;
-            font-size: 0.79rem;
-        }
-
-    }
-</style>
 <footer>
     <div class="footer-container">
-        <span>Desarrollado moviendo las manitas y con mucho 🧡</span>
+        <div class="footer-row">
+            <section class="footer-section brand-section">
+                <div class="logo-container">
+                    <Logo />Francisco Daniel Gómez Álvarez
+                </div>
+                <span class="my-slogan">
+                    Desarrollador con pasión por construir sitios web
+                    memorables.
+                </span>
+                <SpotifyWidget />
+            </section>
+            <section class="footer-section links-section">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Experiencia</a></li>
+                    <li><a href="">Proyectos</a></li>
+                    <li><a href="">Educación</a></li>
+                </ul>
+            </section>
+        </div>
     </div>
 </footer>

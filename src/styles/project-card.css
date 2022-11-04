@@ -1,0 +1,90 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    overflow: hidden;
+    gap: 0.5rem;
+}
+
+.card-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    overflow: hidden;
+    /* aspect-ratio: 1/1; */
+}
+
+.card-picture img {
+    width: 100%;
+    height: fit-content;
+    transition: all 300ms ease;
+}
+
+.card-picture:hover img {
+    width: 105%;
+    cursor: pointer;
+}
+
+/* Card data */
+
+.card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card header */
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header .project-title {
+    padding: 2px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-links .btn {
+    padding: 7px;
+    border-radius: 6px;
+    color: var(--text_2);
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+.project-links .btn svg {
+    stroke: var(--text_2);
+    transition: 300ms ease;
+}
+
+.project-links .btn:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+.project-links .btn:hover svg {
+    stroke: var(--background);
+}
+
+/* Project description */
+
+.card-data .description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: var(--gray);
+}
+
+

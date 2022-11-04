@@ -1,24 +1,10 @@
 ---
-import Card from "../components/Card.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import projects from "../data/projects.json";
+import "../styles/projects-section.css";
 ---
 
-<style>
-    section {
-        padding: 3rem 0 4rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-    }
-</style>
-<section>
+<section class="projects-section">
     <h1>Proyectos<span class="primary-text">.</span></h1>
     <div class="projects-grid">
         {projects.map((project) => <ProjectCard {...project} />)}
