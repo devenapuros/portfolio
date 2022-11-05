@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
+import ProjectModal from "../components/ProjectModal.astro";
 import projects from "../data/projects.json";
 import "../styles/projects-section.css";
 ---
@@ -10,3 +11,14 @@ import "../styles/projects-section.css";
         {projects.map((project) => <ProjectCard {...project} />)}
     </div>
 </section>
+<ProjectModal />
+<script>
+    const $closeModalButtons = document.querySelectorAll(".close-modal-btn");
+    $closeModalButtons.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const modalId = event.currentTarget.getAttribute("data-target");
+            const $modal = document.getElementById(modalId);
+            $modal.classList.remove("visible");
+        });
+    });
+</script>

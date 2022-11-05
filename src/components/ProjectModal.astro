@@ -1,0 +1,93 @@
+---
+const { id } = Astro.props;
+---
+
+<style>
+    .modal {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000080;
+        z-index: 2;
+    }
+
+    .modal.visible {
+        display: flex;
+    }
+
+    .modal-card {
+        position: relative;
+        background-color: var(--background);
+        display: grid;
+        grid-template-columns: auto 23rem;
+        height: 560px;
+        width: 1024px;
+        border-radius: 13px;
+        overflow: hidden;
+    }
+
+    .modal-data-container {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .modal-carousel {
+        width: 100%;
+        height: 100%;
+        background-color: #111;
+    }
+
+    .close-modal-btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 1rem;
+        right: 1rem;
+        border-radius: 6px;
+        padding: 5px;
+        border: 0;
+        background-color: transparent;
+        transition: background-color 300ms ease;
+    }
+
+    .close-modal-btn:hover {
+        background-color: var(--hover);
+        cursor: pointer;
+    }
+
+    .close-modal-btn svg {
+        stroke: var(--gray);
+    }
+</style>
+<div class="modal visible" id={`modal-${id}`}>
+    <div class="modal-card">
+        <div class="modal-carousel">
+            <p>Modal carousel here</p>
+        </div>
+        <div class="modal-data-container">
+            <h3>This is a modal so cool and more words</h3>
+        </div>
+        <button class="close-modal-btn" data-target={`modal-${id}`}>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                height="22"
+                width="22"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+</div>
