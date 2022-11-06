@@ -11,9 +11,18 @@ import "../styles/projects-section.css";
         {projects.map((project) => <ProjectCard {...project} />)}
     </div>
 </section>
-<ProjectModal />
+{projects.map((project) => <ProjectModal {...project} />)}
 <script>
+    const $openModalButtons = document.querySelectorAll(".open-modal-btn");
     const $closeModalButtons = document.querySelectorAll(".close-modal-btn");
+    $openModalButtons.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const modalId = event.currentTarget.getAttribute("data-target");
+            const $modal = document.getElementById(modalId);
+            $modal.classList.add("visible");
+        });
+    });
+
     $closeModalButtons.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             const modalId = event.currentTarget.getAttribute("data-target");

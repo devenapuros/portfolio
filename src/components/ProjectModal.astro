@@ -1,78 +1,115 @@
 ---
-const { id } = Astro.props;
+import TechItem from "./TechItem.astro";
+import "../styles/modal.css";
+
+const {
+    id,
+    projectTitle,
+    projectDescription,
+    projectTechnologies,
+    projectRepo,
+    projectSite,
+} = Astro.props;
 ---
 
 <style>
-    .modal {
-        position: fixed;
-        display: none;
-        justify-content: center;
+    .project-row-links {
+        display: flex;
         align-items: center;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #00000080;
-        z-index: 2;
+        gap: 0.5rem;
     }
 
-    .modal.visible {
-        display: flex;
-    }
-
-    .modal-card {
-        position: relative;
-        background-color: var(--background);
-        display: grid;
-        grid-template-columns: auto 23rem;
-        height: 560px;
-        width: 1024px;
-        border-radius: 13px;
-        overflow: hidden;
-    }
-
-    .modal-data-container {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-    }
-
-    .modal-carousel {
-        width: 100%;
-        height: 100%;
-        background-color: #111;
-    }
-
-    .close-modal-btn {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 1rem;
-        right: 1rem;
+    .project-row-links a {
+        padding: 0.5rem 0.65rem 0.45rem 0.55rem;
+        width: fit-content;
+        height: fit-content;
+        font-size: 13px;
         border-radius: 6px;
-        padding: 5px;
-        border: 0;
-        background-color: transparent;
-        transition: background-color 300ms ease;
-    }
-
-    .close-modal-btn:hover {
+        gap: 0.5rem;
+        color: var(--text_2);
         background-color: var(--hover);
-        cursor: pointer;
+        transition: all 300ms ease;
+        text-decoration: none;
     }
 
-    .close-modal-btn svg {
-        stroke: var(--gray);
+    .project-row-links a svg {
+        stroke: var(--text_2);
+        transition: stroke 300ms ease;
+    }
+
+    .project-row-links a:hover {
+        background-color: var(--text);
+        color: var(--background);
+    }
+
+    .project-row-links a:hover svg {
+        stroke: var(--background);
     }
 </style>
-<div class="modal visible" id={`modal-${id}`}>
+<div class="modal" id={`modal-${id}`}>
     <div class="modal-card">
         <div class="modal-carousel">
             <p>Modal carousel here</p>
         </div>
         <div class="modal-data-container">
-            <h3>This is a modal so cool and more words</h3>
+            <h1>{projectTitle}</h1>
+            <div class="project-row-links">
+                {
+                    projectRepo && (
+                        <a href={projectRepo} class="btn" target="_blank">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="21"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-github"
+                            >
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                            GitHub
+                        </a>
+                    )
+                }
+                {
+                    projectSite && (
+                        <a href={projectSite} class="btn" target="_blank">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                height="21"
+                                width="21"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                                />
+                            </svg>
+                            Ir al sitio
+                        </a>
+                    )
+                }
+            </div>
+            <p>{projectDescription}</p>
+            <div class="accordion-section">
+                <span class="accordion-title">Tecnologías</span>
+                <ul class="tech-list">
+                    {
+                        projectTechnologies.map((technology) => (
+                            <TechItem
+                                name={technology.name}
+                                icon={technology.icon}
+                            />
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
         <button class="close-modal-btn" data-target={`modal-${id}`}>
             <svg

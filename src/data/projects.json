@@ -70,7 +70,7 @@
         ]
     },
     {
-        "id": "firefly-components",
+        "id": "avocadoo",
         "projectPicture": "3.png",
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
@@ -99,7 +99,7 @@
         ]
     },
     {
-        "id": "giboo",
+        "id": "midupass",
         "projectPicture": "4.png",
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
