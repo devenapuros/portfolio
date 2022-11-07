@@ -1,9 +1,10 @@
 ---
 import TechItem from "./TechItem.astro";
-import "../styles/modal.css";
+import "../styles/project-modal.css";
 
 const {
     id,
+    projectPicture,
     projectTitle,
     projectDescription,
     projectTechnologies,
@@ -12,44 +13,10 @@ const {
 } = Astro.props;
 ---
 
-<style>
-    .project-row-links {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .project-row-links a {
-        padding: 0.5rem 0.65rem 0.45rem 0.55rem;
-        width: fit-content;
-        height: fit-content;
-        font-size: 13px;
-        border-radius: 6px;
-        gap: 0.5rem;
-        color: var(--text_2);
-        background-color: var(--hover);
-        transition: all 300ms ease;
-        text-decoration: none;
-    }
-
-    .project-row-links a svg {
-        stroke: var(--text_2);
-        transition: stroke 300ms ease;
-    }
-
-    .project-row-links a:hover {
-        background-color: var(--text);
-        color: var(--background);
-    }
-
-    .project-row-links a:hover svg {
-        stroke: var(--background);
-    }
-</style>
 <div class="modal" id={`modal-${id}`}>
     <div class="modal-card">
         <div class="modal-carousel">
-            <p>Modal carousel here</p>
+            <img src={`/projects/${projectPicture}`} alt="" />
         </div>
         <div class="modal-data-container">
             <h1>{projectTitle}</h1>
@@ -128,3 +95,12 @@ const {
         </button>
     </div>
 </div>
+<script>
+    const $modals = document.querySelectorAll(".modal");
+    $modals.forEach((modal) => {
+        const modalHeight = modal.clientHeight;
+        const modalCardHeight = modal.firstElementChild.clientHeight;
+
+        if (modalCardHeight > modalHeight) modal.style.overflow = "scroll";
+    });
+</script>

@@ -14,7 +14,7 @@
 
 body.dark {
     --background: #111;
-    --background_2: #1a1a1a;
+    --background_2: #181818;
     --text: #eee;
     --text_2: #cdcdcd;
     --gray: #999;
@@ -33,24 +33,6 @@ body.dark {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
-    scrollbar-width: thin;
-    scrollbar-color: var(--gray) var(--background);
-    scroll-behavior: smooth;
-}
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 12px;
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--background);
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--gray);
-    border-radius: 20px;
-    border: 3px solid var(--background);
 }
 
 body {

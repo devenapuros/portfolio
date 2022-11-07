@@ -20,6 +20,7 @@ import "../styles/projects-section.css";
             const modalId = event.currentTarget.getAttribute("data-target");
             const $modal = document.getElementById(modalId);
             $modal.classList.add("visible");
+            document.body.style.overflow = "hidden";
         });
     });
 
@@ -28,6 +29,7 @@ import "../styles/projects-section.css";
             const modalId = event.currentTarget.getAttribute("data-target");
             const $modal = document.getElementById(modalId);
             $modal.classList.remove("visible");
+            document.body.style.overflow = "scroll";
         });
     });
 </script>
