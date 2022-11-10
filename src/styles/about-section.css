@@ -1,8 +1,8 @@
 .about-section {
-    padding: 2rem 0 4rem 0;
+    padding: 3rem 0 4rem 0;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .about-article {
@@ -24,8 +24,8 @@
 
 .about-profile-photo {
     border-radius: 100%;
-    height: 210px;
-    width: 210px;
+    height: 200px;
+    width: 200px;
 }
 
 @media screen and (max-width: 600px) {

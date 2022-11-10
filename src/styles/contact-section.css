@@ -9,7 +9,7 @@
     display: grid;
     list-style: none;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .contact-links .link {
@@ -21,7 +21,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .contact-links .link {
-        padding: 1rem;
+        padding: 1.1rem;
     }
 }
 

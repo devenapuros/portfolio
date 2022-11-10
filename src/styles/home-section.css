@@ -58,6 +58,7 @@
 .stat .label {
     line-height: 1.05;
     font-size: 0.65rem;
+    /* font-family: 'Courier New', Courier, monospace; */
 }
 
 .home-section .button-group {
