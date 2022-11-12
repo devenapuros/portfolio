@@ -118,7 +118,7 @@
     .modal-card {
         display: grid;
         grid-template-columns: auto 23rem;
-        height: 560px;
+        max-height: 560px;
         width: 1024px;
         max-width: 1024px;
         overflow: hidden;

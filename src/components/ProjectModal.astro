@@ -1,6 +1,7 @@
 ---
 import TechItem from "./TechItem.astro";
 import "../styles/project-modal.css";
+import { Carousel } from "./Carousel.jsx";
 
 const {
     id,
@@ -15,9 +16,7 @@ const {
 
 <div class="modal" id={`modal-${id}`}>
     <div class="modal-card">
-        <div class="modal-carousel">
-            <img src={`/projects/${projectPicture}`} alt="" />
-        </div>
+        <Carousel client:visible />
         <div class="modal-data-container">
             <h1>{projectTitle}</h1>
             <div class="project-row-links">
