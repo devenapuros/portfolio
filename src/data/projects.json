@@ -2,6 +2,7 @@
     {
         "id": "firefly-components",
         "projectPicture": "1.png",
+        "carouselImages": ["1.png", "2.png", "3.png", "4.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Firefly Components",
@@ -31,6 +32,7 @@
     {
         "id": "giboo",
         "projectPicture": "2.png",
+        "carouselImages": ["2.png", "3.png", "4.png", "1.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Giboo",
@@ -72,6 +74,7 @@
     {
         "id": "avocadoo",
         "projectPicture": "3.png",
+        "carouselImages": ["3.png", "4.png", "1.png", "2.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Avocadoo",
@@ -101,6 +104,7 @@
     {
         "id": "midupass",
         "projectPicture": "4.png",
+        "carouselImages": ["4.png", "1.png", "2.png", "3.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "MiduPass",

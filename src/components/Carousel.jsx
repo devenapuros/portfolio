@@ -1,33 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/carousel.css";
 
-export const Carousel = ({ images = [], path = "" }) => {
+export const Carousel = ({ images, path = "" }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const carouselRef = useRef();
+    const containerRef = useRef();
+    let options = {
+        root: carouselRef.current,
+        rootMargin: "0px",
+        threshold: 0.5,
+    };
+
+    const detectScroll = (entries) => {
+        let nextSlide;
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                nextSlide = parseInt(entry.target.getAttribute("data-index"));
+                setCurrentSlide(nextSlide);
+            }
+        });
+    };
+
+    useEffect(() => {
+        let observer = new IntersectionObserver(detectScroll, options);
+        for (let i = 0; i < carouselRef.current.children.length; i++) {
+            observer.observe(carouselRef.current.children[i]);
+        }
+    }, []);
 
     const changeSlide = (direction) => {
         let nextSlide =
             direction === "left" ? currentSlide - 1 : currentSlide + 1;
-        console.log(nextSlide);
-        if (nextSlide < 0) nextSlide = 3;
-        else if (nextSlide >= 4) nextSlide = 0;
-        setCurrentSlide(nextSlide);
+        if (nextSlide < 0) nextSlide = images.length - 1;
+        else if (nextSlide >= images.length) nextSlide = 0;
+        let containerWidth = containerRef.current.clientWidth;
+        carouselRef.current.scroll(nextSlide * containerWidth, 0);
     };
 
     return (
-        <div className="carousel-container">
-            <ul className="carousel-viewport">
-                <li className="carousel-slide">
-                    <img src="/projects/1.png" alt="" />
-                </li>
-                <li className="carousel-slide">
-                    <img src="/projects/2.png" alt="" />
-                </li>
-                <li className="carousel-slide">
-                    <img src="/projects/3.png" alt="" />
-                </li>
-                <li className="carousel-slide">
-                    <img src="/projects/4.png" alt="" />
-                </li>
+        <div className="carousel-container" ref={containerRef}>
+            <ul className="carousel-viewport" ref={carouselRef}>
+                {images.map((image, index) => (
+                    <li
+                        className="carousel-slide"
+                        key={image}
+                        data-index={index}
+                    >
+                        <img src={`/projects/${image}`} alt="" />
+                    </li>
+                ))}
             </ul>
             <button
                 className="carousel-btn go-left"
