@@ -1,7 +1,8 @@
 .footer {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    background-color: var(--background_2);
+    border-top: 1px solid var(--hover_2);
 }
 
 .footer-row {
@@ -10,7 +11,6 @@
     padding: 2rem 1rem;
     width: 100%;
     gap: 3rem;
-    border-top: 1px solid var(--hover_2);
     width: 90vw;
     margin: 0 auto;
 }

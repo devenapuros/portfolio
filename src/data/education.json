@@ -3,6 +3,7 @@
         "id": "mongodb-001-basics",
         "educationPicture": "M001.png",
         "educationTitle": "M001: MongoDB Basics",
+        "educationType": "Curso:",
         "educationTime": "Octubre 2022",
         "educationCompany": "MongoDB University",
         "educationLink": "https://university.mongodb.com/course_completion/6211a6ca-8869-4940-b9e1-bccdc01952a5?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
@@ -17,6 +18,7 @@
     {
         "id": "oracle-cloud-foundations",
         "educationPicture": "oracle.png",
+        "educationType": "Certificación:",
         "educationTitle": "Oracle Cloud Infrastructure Foundations 2021 Associate",
         "educationTime": "Noviembre 2021",
         "educationCompany": "Oracle University",

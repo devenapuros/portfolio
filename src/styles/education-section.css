@@ -7,12 +7,12 @@
 
 .education-grid {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    gap: 5rem;
 }
 
-@media screen and (min-width: 601px) {
+/* @media screen and (min-width: 601px) {
     .education-grid {
         gap: 7rem;
     }
@@ -49,4 +49,4 @@
     .education-grid article:nth-child(2n + 1) .circle {
         left: calc(100% - 10px);
     }
-}
+} */

@@ -5,14 +5,15 @@ const {
     id,
     educationPicture,
     educationTitle,
+    educationType,
     educationTime,
     educationCompany,
     educationLink,
 } = Astro.props;
 ---
 
+<!-- <span class="circle"></span> -->
 <article class="education-card">
-    <span class="circle"></span>
     <div class="education-picture">
         <img
             src={`/education/${educationPicture}`}
@@ -21,6 +22,11 @@ const {
     </div>
     <div class="education-data">
         <div class="education-header">
+            {
+                educationType && (
+                    <small class="education-type">{educationType}</small>
+                )
+            }
             <h1 class="education-title">{educationTitle}</h1>
             <span class="education-time">{educationTime}</span>
             <span class="education-company">{educationCompany}</span>
