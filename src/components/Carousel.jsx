@@ -46,50 +46,54 @@ export const Carousel = ({ images, path = "" }) => {
                         key={image}
                         data-index={index}
                     >
-                        <img src={`/projects/${image}`} alt="" />
+                        <img src={`/projects/${image}`} alt="" loading="lazy" />
                     </li>
                 ))}
             </ul>
-            <button
-                className="carousel-btn go-left"
-                onClick={() => changeSlide("left")}
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2.5"
-                    stroke="#000c"
-                    height="16"
-                    width="16"
+            {currentSlide !== 0 && (
+                <button
+                    className="carousel-btn go-left"
+                    onClick={() => changeSlide("left")}
                 >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 19.5L8.25 12l7.5-7.5"
-                    />
-                </svg>
-            </button>
-            <button
-                className="carousel-btn go-right"
-                onClick={() => changeSlide("right")}
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2.5"
-                    stroke="#000c"
-                    height="16"
-                    width="16"
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2.5"
+                        stroke="#000c"
+                        height="16"
+                        width="16"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15.75 19.5L8.25 12l7.5-7.5"
+                        />
+                    </svg>
+                </button>
+            )}
+            {currentSlide !== images.length - 1 && (
+                <button
+                    className="carousel-btn go-right"
+                    onClick={() => changeSlide("right")}
                 >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                    />
-                </svg>
-            </button>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2.5"
+                        stroke="#000c"
+                        height="16"
+                        width="16"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                        />
+                    </svg>
+                </button>
+            )}
             <span className="carousel-indicator">{currentSlide + 1} / 4</span>
         </div>
     );

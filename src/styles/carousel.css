@@ -72,7 +72,13 @@
     padding: 0.25rem 0.5rem;
     background-color: #fff9;
     border-radius: 6px;
-    color: var(--text_2);
+    color: #333;
     font-size: 0.83rem;
     font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-btn {
+        display: none !important;
+    }
 }
