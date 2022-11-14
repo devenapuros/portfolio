@@ -14,23 +14,11 @@ const {
 
 <!-- <span class="circle"></span> -->
 <article class="education-card">
-    <div class="education-picture">
+    <div class={"education-picture"}>
         <img
             src={`/education/${educationPicture}`}
             alt={`Picture of ${educationTitle} degree`}
         />
-    </div>
-    <div class="education-data">
-        <div class="education-header">
-            {
-                educationType && (
-                    <small class="education-type">{educationType}</small>
-                )
-            }
-            <h1 class="education-title">{educationTitle}</h1>
-            <span class="education-time">{educationTime}</span>
-            <span class="education-company">{educationCompany}</span>
-        </div>
         {
             educationLink && (
                 <a
@@ -49,12 +37,26 @@ const {
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                         />
                     </svg>
                     Ver credencial
                 </a>
             )
         }
+    </div>
+    <div class="education-data">
+        <div class="data-section">
+            {
+                educationType && (
+                    <small class="education-type">{educationType}</small>
+                )
+            }
+            <h1 class="education-title">{educationTitle}</h1>
+        </div>
+        <div class="data-section">
+            <span class="education-time">{educationTime}</span>
+            <span class="education-company">{educationCompany}</span>
+        </div>
     </div>
 </article>

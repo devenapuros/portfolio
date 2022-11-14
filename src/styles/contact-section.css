@@ -8,25 +8,20 @@
 .contact-links {
     display: grid;
     list-style: none;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-}
-
-.contact-links .link {
-    padding: 1.35rem;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 2rem;
+    row-gap: 3rem;
 }
 
 @media screen and (min-width: 600px) {
     .contact-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .contact-links .link {
-        padding: 1.1rem;
+        grid-template-columns: repeat(2, auto);
     }
 }
 
 @media screen and (min-width: 900px) {
     .contact-links {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-between;
     }
 }

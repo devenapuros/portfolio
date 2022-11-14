@@ -1,8 +1,7 @@
 .footer {
     display: flex;
     align-items: center;
-    background-color: var(--background_2);
-    border-top: 1px solid var(--hover_2);
+    /* background-color: var(--background_2); */
 }
 
 .footer-row {
@@ -13,6 +12,7 @@
     gap: 3rem;
     width: 90vw;
     margin: 0 auto;
+    border-top: 1px solid var(--hover_2);
 }
 
 .footer-section {
@@ -45,7 +45,7 @@
 .links-section ul {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
 }
 

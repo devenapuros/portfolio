@@ -5,7 +5,7 @@
     --text_2: #252525;
     --gray: #6a6a6a;
     --gray_2: #bbb;
-    --hover: #0000000e;
+    --hover: #00000015;
     --hover_2: #00000018;
     --primary: #ffa200;
     --primary_2: #ffb028;
@@ -19,7 +19,7 @@ body.dark {
     --text_2: #cdcdcd;
     --gray: #999;
     --gray_2: #555;
-    --hover: #ffffff18;
+    --hover: #ffffff12;
     --hover_2: #ffffff0e;
     --primary: #ffb200;
     --primary_2: #ffb028;
