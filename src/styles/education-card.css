@@ -44,8 +44,24 @@
 }
 
 .education-title {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.education-title svg {
+    stroke: var(--gray);
+}
+
+.education-title:hover {
+    display: inline;
+    text-decoration: underline;
+}
+
+.education-title h1,
+.edu-title {
     font-size: 1.05rem;
     line-height: 1.2;
+    vertical-align: bottom;
 }
 
 .education-time {
