@@ -19,31 +19,6 @@ const {
             src={`/education/${educationPicture}`}
             alt={`Picture of ${educationTitle} degree`}
         />
-        {
-            educationLink && (
-                <a
-                    href={educationLink}
-                    class="btn education-link"
-                    target="_blank"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        height="20"
-                        width="20"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                        />
-                    </svg>
-                    Ver credencial
-                </a>
-            )
-        }
     </div>
     <div class="education-data">
         <div class="data-section">
@@ -56,11 +31,12 @@ const {
                 educationLink ? (
                     <a
                         href={educationLink}
-                        class="education-title"
+                        class="education-link"
                         target="_blank"
                     >
                         <h1>
-                            {educationTitle}{"  "}
+                            {educationTitle}
+                            {"  "}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -78,7 +54,7 @@ const {
                         </h1>
                     </a>
                 ) : (
-                    <h1 class="edu-title">{educationTitle}</h1>
+                    <h1 class="education-title">{educationTitle}</h1>
                 )
             }
         </div>

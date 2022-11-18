@@ -25,10 +25,6 @@
     height: auto;
 }
 
-.education-picture:hover .education-link {
-    opacity: 1;
-}
-
 /* Education data */
 
 .education-data {
@@ -43,22 +39,22 @@
     gap: 0.35rem;
 }
 
-.education-title {
+.education-link {
     text-decoration: none;
     color: var(--text);
 }
 
-.education-title svg {
+.education-link svg {
     stroke: var(--gray);
 }
 
-.education-title:hover {
+.education-link:hover {
     display: inline;
     text-decoration: underline;
 }
 
-.education-title h1,
-.edu-title {
+.education-link h1,
+.education-title {
     font-size: 1.05rem;
     line-height: 1.2;
     vertical-align: bottom;
@@ -79,31 +75,6 @@
     color: var(--text_2);
     font-weight: 500;
     font-size: 0.85rem;
-}
-
-.education-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 13px;
-    text-decoration: none;
-    transition: all 300ms ease;
-    z-index: 2;
-    background-color: var(--text);
-    color: var(--background);
-    opacity: 0;
-}
-
-.education-link svg {
-    stroke: var(--background);
-    transition: all 100ms ease;
 }
 
 @media screen and (min-width: 768px) {
