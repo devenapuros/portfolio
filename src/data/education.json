@@ -1,7 +1,7 @@
 [
     {
         "id": "mongodb-001-basics",
-        "educationPicture": "M001.png",
+        "educationPicture": "M001.webp",
         "educationTitle": "M001: MongoDB Basics",
         "educationType": "Curso:",
         "educationTime": "Octubre 2022",
@@ -10,7 +10,7 @@
     },
     {
         "id": "fiuaemex-engineering",
-        "educationPicture": "fiuaemex-degree.png",
+        "educationPicture": "fiuaemex-degree.webp",
         "educationTitle": "Pasante de Ingeniería en Computación",
         "educationTime": "Diciembre 2021",
         "educationCompany": "Universidad Autónoma del Estado de México"

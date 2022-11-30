@@ -1,7 +1,7 @@
 [
     {
         "id": "le_warehouse",
-        "jobPicture": "le.png",
+        "jobPicture": "le.webp",
         "jobColor": "#0086eb",
         "jobTitle": "Desarrollador Web Full Stack",
         "jobTime": "Enero 2022 - Presente (9 meses)",
@@ -61,7 +61,7 @@
     },
     {
         "id": "sca-fi",
-        "jobPicture": "fi.png",
+        "jobPicture": "fi.webp",
         "jobColor": "#3a7d44",
         "jobTitle": "Desarrollador Web Full Stack",
         "jobTime": "Agosto 2020 - Julio 2021 (1 año)",
