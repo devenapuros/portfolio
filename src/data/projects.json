@@ -1,12 +1,11 @@
 [
     {
         "id": "firefly-components",
-        "projectPicture": "1.png",
-        "carouselImages": ["1.png", "2.png", "3.png", "4.png"],
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Firefly Components",
-        "projectSlogan": "Minimalist and reusable component set",
+        "projectSlogan": "Set de componentes minimalistas y reutilizables",
         "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
 
         "projectTechnologies": [
@@ -31,7 +30,6 @@
     },
     {
         "id": "giboo",
-        "projectPicture": "2.png",
         "carouselImages": ["2.png", "3.png", "4.png", "1.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
@@ -73,7 +71,6 @@
     },
     {
         "id": "avocadoo",
-        "projectPicture": "3.png",
         "carouselImages": ["3.png", "4.png", "1.png", "2.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
@@ -103,27 +100,26 @@
     },
     {
         "id": "midupass",
-        "projectPicture": "4.png",
-        "carouselImages": ["4.png", "1.png", "2.png", "3.png"],
+        "carouselImages": ["1.png", "2.png", "3.png"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
-        "projectSite": "https://firefly-components.netlify.app/",
+        "projectSite": "https://hacktoberfest-2022.vercel.app/entry/devenapuros",
         "projectTitle": "MiduPass",
-        "projectSlogan": "Simple pass generator",
+        "projectSlogan": "Un simple generador de contraseñas",
         "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
 
         "projectTechnologies": [
+            {
+                "name": "Astro",
+                "icon": "astro"
+            },
             { "name": "React.js", "icon": "react" },
             {
-                "name": "Styled Components",
-                "icon": "styledcomponents"
+                "name": "CSS Modules",
+                "icon": "css"
             },
             {
                 "name": "JavaScript",
                 "icon": "javascript"
-            },
-            {
-                "name": "NPM",
-                "icon": "npm"
             },
             {
                 "name": "Git",
@@ -132,14 +128,6 @@
             {
                 "name": "Github",
                 "icon": "github"
-            },
-            {
-                "name": "Vite",
-                "icon": "vite"
-            },
-            {
-                "name": "Netlify",
-                "icon": "netlify"
             }
         ]
     }

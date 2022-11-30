@@ -5,7 +5,6 @@ import { Carousel } from "./Carousel.jsx";
 
 const {
     id,
-    projectPicture,
     carouselImages,
     projectTitle,
     projectDescription,
@@ -17,7 +16,7 @@ const {
 
 <div class="modal" id={`modal-${id}`}>
     <div class="modal-card">
-        <Carousel client:visible images={carouselImages} />
+        <Carousel client:visible images={carouselImages} path={id} />
         <div class="modal-data-container">
             <h1>{projectTitle}</h1>
             <div class="project-row-links">

@@ -3,6 +3,7 @@ import "../styles/project-card.css";
 const {
     id,
     projectPicture,
+    carouselImages,
     projectTitle,
     projectRepo,
     projectSite,
@@ -13,7 +14,7 @@ const {
 <article class="project-card">
     <div class="project-picture open-modal-btn" data-target={`modal-${id}`}>
         <img
-            src={`/projects/${projectPicture}`}
+            src={`/projects/${id}/${carouselImages[0]}`}
             alt={`Logo of ${projectTitle} project`}
         />
     </div>

@@ -46,7 +46,11 @@ export const Carousel = ({ images, path = "" }) => {
                         key={image}
                         data-index={index}
                     >
-                        <img src={`/projects/${image}`} alt="" loading="lazy" />
+                        <img
+                            src={`/projects/${path}/${image}`}
+                            alt=""
+                            loading="lazy"
+                        />
                     </li>
                 ))}
             </ul>
