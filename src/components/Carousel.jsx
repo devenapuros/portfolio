@@ -98,7 +98,9 @@ export const Carousel = ({ images, path = "" }) => {
                     </svg>
                 </button>
             )}
-            <span className="carousel-indicator">{currentSlide + 1} / 4</span>
+            <span className="carousel-indicator">
+                {currentSlide + 1} / {images.length}
+            </span>
         </div>
     );
 };

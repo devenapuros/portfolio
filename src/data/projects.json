@@ -71,7 +71,7 @@
     },
     {
         "id": "avocadoo",
-        "carouselImages": ["3.png", "4.png", "1.png", "2.png"],
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Avocadoo",
