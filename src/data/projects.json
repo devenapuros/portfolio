@@ -30,11 +30,11 @@
     },
     {
         "id": "giboo",
-        "carouselImages": ["2.png", "3.png", "4.png", "1.png"],
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Giboo",
-        "projectSlogan": "Thousands of gifs waiting to be discovered",
+        "projectSlogan": "Un lugar para descubrir gifs divertidos",
         "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
 
         "projectTechnologies": [
