@@ -25,6 +25,10 @@
             {
                 "name": "Github",
                 "icon": "github"
+            },
+            {
+                "name": "Netlify",
+                "icon": "netlify"
             }
         ]
     },
@@ -35,7 +39,7 @@
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Giboo",
         "projectSlogan": "Un lugar para descubrir gifs divertidos",
-        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+        "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
 
         "projectTechnologies": [
             { "name": "React.js", "icon": "react" },
@@ -75,14 +79,14 @@
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Avocadoo",
-        "projectSlogan": "Shop the best avocados now",
-        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+        "projectSlogan": "Una tienda de aguacates",
+        "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
 
         "projectTechnologies": [
-            { "name": "React.js", "icon": "react" },
+            { "name": "Next.js", "icon": "nextjs" },
             {
-                "name": "Styled Components",
-                "icon": "styledcomponents"
+                "name": "CSS",
+                "icon": "css"
             },
             {
                 "name": "JavaScript",
@@ -95,6 +99,14 @@
             {
                 "name": "Github",
                 "icon": "github"
+            },
+            {
+                "name": "Yarn",
+                "icon": "yarn"
+            },
+            {
+                "name": "Vercel",
+                "icon": "vercel"
             }
         ]
     },
@@ -105,7 +117,7 @@
         "projectSite": "https://hacktoberfest-2022.vercel.app/entry/devenapuros",
         "projectTitle": "MiduPass",
         "projectSlogan": "Un simple generador de contraseñas",
-        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+        "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
 
         "projectTechnologies": [
             {
