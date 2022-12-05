@@ -1,45 +1,54 @@
-# Astro Starter Kit: Minimal
+<h1 align="center">
+  <div align="center">
+    <img alt="Devenpauros (Daniel Gomez) logo" src="./public/favicon.svg" height="150px" width="auto"/>
+  </div>
+  <br/>
+  Portfolio - Daniel Gomez
+</h1>
+<p align="center">
+    My personal portfolio built with Astro.
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">Go to website</a>&nbsp;
+    ·
+    &nbsp;<a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+  </p>
+<br/>
+
+## Built With 🚀
+
+This project was built using these technologies:
+
+* Astro
+* Netlify services
+
+## Features
+
+* 🚀 A great web performance
+* 📱 Fully Responsive
+* ☀️ Light and Dark Theme
+
+
+## Getting Started
+
+Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+
+### Installation and Setup Instructions 🛠
+
+1. In the project directory, run:
+
+ ```
+ npm install
+ ```
+
+2. After, you can run:
 
 ```
-npm create astro@latest -- --template minimal
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+This runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Show your support
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Give a ⭐ if you like this website. Thanks!
