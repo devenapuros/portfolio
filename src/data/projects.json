@@ -77,7 +77,7 @@
         "id": "avocadoo",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
-        "projectSite": "https://firefly-components.netlify.app/",
+        "projectSite": "https://avocadoo.vercel.app/",
         "projectTitle": "Avocadoo",
         "projectSlogan": "Una tienda de aguacates",
         "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
