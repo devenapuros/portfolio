@@ -39,10 +39,18 @@ import "../styles/topbar-menu.css";
     </svg>
 </button>
 <script>
+    const $menuItems = document.querySelectorAll(".topbar-menu .menu-item");
     const $menu = document.getElementById("topbar-menu");
     const $menuBtn = document.getElementById("menu-btn");
     $menuBtn.addEventListener("click", (event) => {
         $menu.classList.toggle("expanded");
         $menuBtn.classList.toggle("expanded");
+    });
+
+    $menuItems.forEach((element) => {
+        element.addEventListener("click", () => {
+            $menu.classList.remove("expanded");
+            $menuBtn.classList.remove("expanded");
+        });
     });
 </script>
