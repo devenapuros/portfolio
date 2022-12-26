@@ -5,7 +5,7 @@
         "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Firefly Components",
-        "projectSlogan": "Set de componentes minimalistas y reutilizables",
+        "projectSlogan": "Set de componentes minimalistas y reutilizables ⚛️",
         "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
 
         "projectTechnologies": [
@@ -35,10 +35,10 @@
     {
         "id": "giboo",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp"],
-        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+        "projectRepo": "https://github.com/devenapuros/giboo",
         "projectSite": "https://firefly-components.netlify.app/",
         "projectTitle": "Giboo",
-        "projectSlogan": "Un lugar para descubrir gifs divertidos",
+        "projectSlogan": "Un lugar para descubrir gifs divertidos 🖼️",
         "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
 
         "projectTechnologies": [
@@ -76,10 +76,10 @@
     {
         "id": "avocadoo",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
-        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+        "projectRepo": "https://github.com/devenapuros/avocadoo/",
         "projectSite": "https://avocadoo.vercel.app/",
         "projectTitle": "Avocadoo",
-        "projectSlogan": "Una tienda de aguacates",
+        "projectSlogan": "Tienda de aguacates 🥑",
         "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
 
         "projectTechnologies": [
@@ -113,10 +113,10 @@
     {
         "id": "midupass",
         "carouselImages": ["1.png", "2.png", "3.png"],
-        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
-        "projectSite": "https://hacktoberfest-2022.vercel.app/entry/devenapuros",
+        "projectRepo": "https://github.com/devenapuros/midupass",
+        "projectSite": "https://midupass.netlify.app",
         "projectTitle": "MiduPass",
-        "projectSlogan": "Un simple generador de contraseñas",
+        "projectSlogan": "Generador de contraseñas 🔑",
         "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
 
         "projectTechnologies": [
