@@ -36,7 +36,7 @@
         "id": "giboo",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp"],
         "projectRepo": "https://github.com/devenapuros/giboo",
-        "projectSite": "https://firefly-components.netlify.app/",
+        "projectSite": "https://giboo.vercel.app/",
         "projectTitle": "Giboo",
         "projectSlogan": "Un lugar para descubrir gifs divertidos 🖼️",
         "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
@@ -68,8 +68,8 @@
                 "icon": "vite"
             },
             {
-                "name": "Netlify",
-                "icon": "netlify"
+                "name": "Vercel",
+                "icon": "vercel"
             }
         ]
     },
@@ -120,10 +120,6 @@
         "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
 
         "projectTechnologies": [
-            {
-                "name": "Astro",
-                "icon": "astro"
-            },
             { "name": "React.js", "icon": "react" },
             {
                 "name": "CSS Modules",
@@ -140,6 +136,10 @@
             {
                 "name": "Github",
                 "icon": "github"
+            },
+            {
+                "name": "Netlify",
+                "icon": "netlify"
             }
         ]
     }
