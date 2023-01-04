@@ -88,6 +88,7 @@
 
 .job-data .description {
     margin: 1.3rem 0;
+    line-height: 1.25;
 }
 
 /* Accordion */

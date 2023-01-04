@@ -4,16 +4,16 @@
         "jobPicture": "le.webp",
         "jobColor": "#0086eb",
         "jobTitle": "Desarrollador Web Full Stack",
-        "jobTime": "Enero 2022 - Presente (9 meses)",
+        "jobTime": "Enero 2022 - Noviembre 2022 (11 meses)",
         "jobCompany": "Lámparas Estella S.A. de C.V.",
-        "jobDescription": "Colaboré en el desarrollo de un sistema web que permitió agilizar las actividades en los almacenes de la empresa y reducir hasta en un 50% el tiempo requerido para completar cada actividad, lo que tuvo un impacto directo en la productividad de la empresa.",
+        "jobDescription": "Colaboré en el desarrollo de un sistema web destinado a usarse en los almacenes de la empresa. La implementación de este sistema ayudó a reducir hasta en un 50% el tiempo requerido para completar las actividades internas, lo que tuvo un impacto directo en la productividad de la empresa.",
         "jobActivities": [
             "Diseño de interfaces de usuario con Figma.",
             "Programación de interfaces con React.js.",
             "Desarrollo de componentes reutilizables.",
             "Desarrollo de APIs con Node.js y Express.js.",
             "Consumo de REST APIs con JavaScript.",
-            "Modelado e implementación de bases de datos."
+            "Modelado e implementación de bases de datos PostgreSQL."
         ],
         "jobTechnologies": [
             { "name": "React.js", "icon": "react" },
@@ -66,7 +66,7 @@
         "jobTitle": "Desarrollador Web Full Stack",
         "jobTime": "Agosto 2020 - Julio 2021 (1 año)",
         "jobCompany": "Facultad de Ingeniería UAEMex",
-        "jobDescription": "Colaboré en el desarrollo del Sistema de Control de Acceso, un sistema web para la Facultad de Ingeniería que permitió registrar y controlar el aforo a las instalaciones del recinto educativo, lo que ayudó a minimizar el riesgo tras la contingencia sanitaria.",
+        "jobDescription": "Colaboré en el desarrollo del \"Sistema de Control de Acceso\", un sistema web para la Facultad de Ingeniería que permitió registrar y controlar el aforo a las instalaciones del recinto educativo, lo que ayudó a minimizar el riesgo tras la contingencia sanitaria.",
         "jobActivities": [
             "Diseño y programación de interfaces de usuario con HTML, CSS y JavaScript, con diseño responsivo.",
             "Desarrollo backend con PHP.",

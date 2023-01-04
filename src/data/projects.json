@@ -1,18 +1,18 @@
 [
     {
-        "id": "firefly-components",
-        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
-        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
-        "projectSite": "https://firefly-components.netlify.app/",
-        "projectTitle": "Firefly Components",
-        "projectSlogan": "Set de componentes minimalistas y reutilizables ⚛️",
-        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+        "id": "midupass",
+        "carouselImages": ["1.png", "2.png", "3.png"],
+        "projectRepo": "https://github.com/devenapuros/midupass",
+        "projectSite": "https://midupass.netlify.app",
+        "projectTitle": "MiduPass",
+        "projectSlogan": "Generador de contraseñas 🔑",
+        "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
 
         "projectTechnologies": [
             { "name": "React.js", "icon": "react" },
             {
-                "name": "Styled Components",
-                "icon": "styledcomponents"
+                "name": "CSS Modules",
+                "icon": "css"
             },
             {
                 "name": "JavaScript",
@@ -29,6 +29,43 @@
             {
                 "name": "Netlify",
                 "icon": "netlify"
+            }
+        ]
+    },
+    {
+        "id": "avocadoo",
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
+        "projectRepo": "https://github.com/devenapuros/avocadoo/",
+        "projectSite": "https://avocadoo.vercel.app/",
+        "projectTitle": "Avocadoo",
+        "projectSlogan": "Tienda de aguacates 🥑",
+        "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+
+        "projectTechnologies": [
+            { "name": "Next.js", "icon": "nextjs" },
+            {
+                "name": "CSS",
+                "icon": "css"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "Github",
+                "icon": "github"
+            },
+            {
+                "name": "Yarn",
+                "icon": "yarn"
+            },
+            {
+                "name": "Vercel",
+                "icon": "vercel"
             }
         ]
     },
@@ -74,56 +111,19 @@
         ]
     },
     {
-        "id": "avocadoo",
+        "id": "firefly-components",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
-        "projectRepo": "https://github.com/devenapuros/avocadoo/",
-        "projectSite": "https://avocadoo.vercel.app/",
-        "projectTitle": "Avocadoo",
-        "projectSlogan": "Tienda de aguacates 🥑",
-        "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
-
-        "projectTechnologies": [
-            { "name": "Next.js", "icon": "nextjs" },
-            {
-                "name": "CSS",
-                "icon": "css"
-            },
-            {
-                "name": "JavaScript",
-                "icon": "javascript"
-            },
-            {
-                "name": "Git",
-                "icon": "git"
-            },
-            {
-                "name": "Github",
-                "icon": "github"
-            },
-            {
-                "name": "Yarn",
-                "icon": "yarn"
-            },
-            {
-                "name": "Vercel",
-                "icon": "vercel"
-            }
-        ]
-    },
-    {
-        "id": "midupass",
-        "carouselImages": ["1.png", "2.png", "3.png"],
-        "projectRepo": "https://github.com/devenapuros/midupass",
-        "projectSite": "https://midupass.netlify.app",
-        "projectTitle": "MiduPass",
-        "projectSlogan": "Generador de contraseñas 🔑",
-        "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+        "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+        "projectSite": "https://firefly-components.netlify.app/",
+        "projectTitle": "Firefly Components",
+        "projectSlogan": "Set de componentes minimalistas y reutilizables ⚛️",
+        "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
 
         "projectTechnologies": [
             { "name": "React.js", "icon": "react" },
             {
-                "name": "CSS Modules",
-                "icon": "css"
+                "name": "Styled Components",
+                "icon": "styledcomponents"
             },
             {
                 "name": "JavaScript",
