@@ -8,9 +8,9 @@
 <p align="center">
     My personal portfolio built with Astro.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Go to website</a>&nbsp;
+    <a href="https://danieldev.tech">Go to website</a>&nbsp;
     ·
-    &nbsp;<a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    &nbsp;<a href="https://github.com/devenapuros/portfolio/issues">Report Bug</a>
   </p>
 <br/>
 
