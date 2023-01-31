@@ -127,7 +127,7 @@
 
 @media screen and (min-width: 481px) {
     .home-section .name {
-        font-size: 1.7rem;
+        font-size: 1.65rem;
     }
 
     .home-section .slogan {
@@ -178,7 +178,7 @@
 
 @media screen and (min-width: 769px) {
     .home-section > .name {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .home-section > .slogan {

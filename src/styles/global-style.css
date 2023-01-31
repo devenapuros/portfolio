@@ -1,5 +1,5 @@
 :root {
-    --background: #f8f9fa;
+    --background: #fafbfc;
     --background_2: #fff;
     --text: #111;
     --text_2: #252525;
@@ -15,7 +15,7 @@
 body.dark {
     --background: #0a0a0a;
     --background_2: #181818;
-    --text: #eee;
+    --text: #f3f3f3;
     --text_2: #cdcdcd;
     --gray: #999;
     --gray_2: #555;
@@ -114,10 +114,7 @@ p {
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(#fdc830, #f37335);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
 }
 
 /* MAIN */
