@@ -1,5 +1,38 @@
 [
     {
+        "id": "nananames",
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
+        "projectRepo": "https://github.com/devenapuros/nananames",
+        "projectSite": "https://nananames.vercel.app",
+        "projectTitle": "NaNaNames",
+        "projectSlogan": "Generador de nombres de mascotas usando IA",
+        "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+
+        "projectTechnologies": [
+            { "name": "Next.js", "icon": "nextjs" },
+            {
+                "name": "CSS Modules",
+                "icon": "css"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "Github",
+                "icon": "github"
+            },
+            {
+                "name": "Vercel",
+                "icon": "vercel"
+            }
+        ]
+    },
+    {
         "id": "midupass",
         "carouselImages": ["1.png", "2.png", "3.png"],
         "projectRepo": "https://github.com/devenapuros/midupass",
