@@ -1,5 +1,38 @@
 [
     {
+        "id": "hack4tools",
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp"],
+        "projectRepo": "https://github.com/devenapuros/hack4tools",
+        "projectSite": "https://hack4tools.vercel.app",
+        "projectTitle": "Hack4tools",
+        "projectSlogan": "Herramientas y utilidades para pentesters",
+        "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+
+        "projectTechnologies": [
+            { "name": "Next.js", "icon": "nextjs" },
+            {
+                "name": "CSS Modules",
+                "icon": "css"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "Github",
+                "icon": "github"
+            },
+            {
+                "name": "Vercel",
+                "icon": "vercel"
+            }
+        ]
+    },
+    {
         "id": "nananames",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
         "projectRepo": "https://github.com/devenapuros/nananames",

@@ -9,16 +9,14 @@
     background-color: transparent;
     border: 0;
     border-radius: 8px;
-    transition: background-color 300ms ease;
-}
-
-.theme-toggle svg {
-    stroke: var(--text_2);
+    color: var(--gray);
+    transition: background-color 300ms ease, color 300ms ease;
 }
 
 .theme-toggle:hover {
     cursor: pointer;
     background-color: var(--hover);
+    color: var(--text);
 }
 
 .theme-toggle .sun {

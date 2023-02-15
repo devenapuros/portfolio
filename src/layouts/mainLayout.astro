@@ -15,10 +15,36 @@ import "../styles/global-style.css";
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
         />
-
+        <meta
+            name="description"
+            content="Desarrollador con pasión por construir sitios web memorables."
+        />
+        <meta name="author" content="Devenapuros" />
+        <meta
+            name="keywords"
+            content="Daniel Gomez,Desarrollador Frontend,frontend,Desarrollador,JavaScript,React.js"
+        />
+        <meta
+            property="og:title"
+            content="Daniel Gómez - Desarrollador Frontend"
+        />
+        <meta property="og:url" content="https://danieldev.tech" />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta
+            property="og:description"
+            content="Desarrollador con pasión por construir sitios web memorables."
+        />
         <title>{title}</title>
     </head>
     <body>
         <slot />
+        <script>
+            const darkThemeMq = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            );
+            if (darkThemeMq.matches) {
+                document.body.classList.toggle("dark");
+            }
+        </script>
     </body>
 </html>
