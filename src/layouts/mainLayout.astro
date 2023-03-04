@@ -36,14 +36,16 @@ import "../styles/global-style.css";
         />
         <title>{title}</title>
     </head>
-    <body>
+    <body class="dark">
         <slot />
         <script>
             const darkThemeMq = window.matchMedia(
                 "(prefers-color-scheme: dark)"
             );
             if (darkThemeMq.matches) {
-                document.body.classList.toggle("dark");
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
             }
         </script>
     </body>

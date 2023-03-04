@@ -1,30 +1,14 @@
 .footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    /* background-color: var(--background_2); */
-}
-
-.footer-row {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    width: 100%;
-    gap: 3rem;
-    width: 90vw;
     margin: 0 auto;
-    border-top: 1px solid var(--hover_2);
+    padding: 2rem 0;
+    max-width: 90vw;
+    border-top: 1px solid var(--hover);
 }
 
-.footer-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.brand-section {
-    gap: 1rem;
-}
-
-.brand-section .logo-container {
+.logo-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -33,53 +17,29 @@
     color: var(--text);
 }
 
-.brand-section .my-slogan {
-    color: var(--text_2);
-    font-size: 0.9rem;
-}
-
-.brand-section .spotify-widget {
-    margin-top: 1.5rem;
-}
-
-.links-section ul {
+.footer-list {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
     list-style: none;
 }
 
-.links-section li a {
+.footer-anchor {
     color: var(--gray);
     font-size: 0.93rem;
     font-weight: 500;
     text-decoration: none;
+    transition: color 200ms ease;
 }
 
-.links-section li a:hover {
+.footer-anchor:hover {
     color: var(--text);
 }
 
-.footer-slogan {
-    color: var(--gray);
-    font-size: 0.87rem;
-    margin: 1rem auto;
-}
-
 @media screen and (min-width: 480px) {
-    .footer-row {
-        flex-direction: row;
-        padding: 3rem;
-        gap: 3rem;
-    }
-
-    .brand-section {
-        width: 60%;
-    }
 }
 
 @media screen and (min-width: 900px) {
-    .footer-row {
+    .footer {
         width: 866px;
     }
 }

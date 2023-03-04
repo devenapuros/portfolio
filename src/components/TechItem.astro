@@ -15,6 +15,6 @@ const { name, icon } = Astro.props;
     }
 </style>
 <li>
-    <img src={`/icons/${icon}.svg`} alt={name} />
+    <img src={`/icons/${icon}.svg`} alt={name} loading="lazy" />
     {name}
 </li>

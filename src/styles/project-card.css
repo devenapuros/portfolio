@@ -19,11 +19,11 @@
 .project-picture img {
     width: 100%;
     height: fit-content;
-    transition: all 300ms ease;
+    transition: all 240ms;
 }
 
 .project-picture:hover img {
-    width: 105%;
+    transform: scale(1.05);
     cursor: pointer;
 }
 

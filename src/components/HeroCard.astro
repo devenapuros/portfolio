@@ -3,39 +3,31 @@ const { heroName, heroDescription, heroPicture } = Astro.props;
 ---
 
 <style>
-    .card-body {
-        padding: 1.2rem;
-        width: 100%;
+    .hero-card {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .hero-image {
+        border-radius: 100%;
+    }
+
+    .hero-data {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .hero-picture {
-        height: 7rem;
-        height: 7rem;
-        border-radius: 100%;
-        overflow: hidden;
-        object-fit: contain;
-        margin-bottom: 0.5rem;
-    }
-
-    .hero-picture img {
-        height: 100%;
-        width: 100%;
+        gap: 0.4rem;
     }
 
     .hero-name {
-        font-size: 1.05rem;
-        font-weight: 600;
+        font-size: 1rem;
+        font-weight: 700;
         color: var(--text);
     }
 
     .hero-description {
-        font-size: 0.8125rem;
-        color: var(--text_2);
+        font-size: 0.75rem;
+        color: var(--gray);
     }
 
     @media screen and (max-width: 600px) {
@@ -44,11 +36,17 @@ const { heroName, heroDescription, heroPicture } = Astro.props;
         }
     }
 </style>
-<article>
-    <div class="card-body">
-        <div class="hero-picture">
-            <img src={`/heros/${heroPicture}`} alt={heroName} loading="lazy" />
-        </div>
+<article class="hero-card">
+    <img
+        class="hero-image"
+        src={`/heros/${heroPicture}`}
+        alt={heroName}
+        loading="lazy"
+        height="64px"
+        width="64px"
+    />
+
+    <div class="hero-data">
         <h1 class="hero-name">{heroName}</h1>
         <p class="hero-description">{heroDescription}</p>
     </div>

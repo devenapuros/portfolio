@@ -14,7 +14,7 @@ import heros from "../data/heros.json";
     .heros-grid {
         margin-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
@@ -29,12 +29,10 @@ import heros from "../data/heros.json";
             grid-template-columns: repeat(2, 1fr);
         }
     }
-
-    
 </style>
 <section>
     <h1>Mis heroes<span class="primary-text">.</span></h1>
-    <p>Un pequeño homenaje a algunas personas que considero mis referentes.</p>
+    <p>Pequeño homenaje a personas que me inspiran.</p>
     <div class="heros-grid">
         {heros.map((hero) => <HeroCard {...hero} />)}
     </div>
