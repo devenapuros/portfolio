@@ -21,7 +21,6 @@
     font-size: 2.2rem;
     font-weight: 800;
     color: var(--text);
-    line-height: 1;
     width: 90%;
 }
 
@@ -178,25 +177,26 @@
 
 @media screen and (min-width: 769px) {
     .home-section > .name {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .home-section > .slogan {
-        font-size: 3.4rem;
-        width: 85%;
+        font-size: 3.8rem;
+        width: 90%;
+        line-height: 1;
     }
 
     .home-section .stats-list {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 7.2rem;
+        gap: 7.5rem;
     }
 
     .stat .counter {
-        font-size: 1.6rem;
+        font-size: 1.35rem;
     }
     .stat .label {
-        font-size: 0.83rem;
+        font-size: 0.81rem;
     }
 }

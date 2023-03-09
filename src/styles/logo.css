@@ -1,8 +1,8 @@
 /* LOGO */
 
 .logo {
-    height: 30px;
-    width: 30px;
+    height: 27px;
+    width: 27px;
     aspect-ratio: 1/1;
     background-color: var(--primary);
     border-radius: 8px;
