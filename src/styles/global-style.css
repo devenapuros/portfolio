@@ -5,8 +5,6 @@
     --text_2: #252525;
     --gray: #6a6a6a;
     --gray_2: #bbb;
-    --hover: #00000014;
-    --hover_2: #00000018;
     --primary: #ffa200;
     --primary_2: #ffb028;
     --secondary: #1c1c1c;
@@ -19,8 +17,6 @@ body.dark {
     --text_2: #cdcdcd;
     --gray: #999;
     --gray_2: #555;
-    --hover: #ffffff12;
-    --hover_2: #ffffff0e;
     --primary: #ffb200;
     --primary_2: #ffb028;
     --secondary: #fff;
@@ -34,6 +30,45 @@ body.dark {
         "Segoe UI", Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
     scroll-behavior: smooth;
+}
+
+@keyframes hi {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.hi {
+    animation: hi 1.5s linear -0.5s infinite;
+    display: inline-block;
+    transform-origin: 70% 70%;
+}
+
+@media (prefers-reduced-motion) {
+    .hi {
+        animation: none;
+    }
 }
 
 body {

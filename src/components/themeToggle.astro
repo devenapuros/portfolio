@@ -17,7 +17,7 @@ import "../styles/theme-toggle.css";
         ><path d="M12 3a6.364 6.364 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
     </svg>
     <svg
-    class="sun"
+        class="sun"
         xmlns="http://www.w3.org/2000/svg"
         width="20"
         height="20"
@@ -39,6 +39,7 @@ import "../styles/theme-toggle.css";
         const toggleButton = document.getElementById("theme-toggle");
         toggleButton.addEventListener("click", (event) => {
             document.body.classList.toggle("dark");
+            document.documentElement.classList.toggle("dark");
         });
     });
 </script>

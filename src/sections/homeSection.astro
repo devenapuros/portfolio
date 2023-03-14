@@ -3,14 +3,22 @@ import "../styles/home-section.css";
 ---
 
 <section class="home-section" id="home">
-    <h1 class="name">Hola! Soy Daniel Gómez.</h1>
-    <h2 class="slogan">
-        Desarrollador con pasión por construir sitios web <span
-            class="gradient-text">memorables</span
-        >.
-    </h2>
+    <div class="flex flex-col gap-9 text-center items-center justify-center">
+        <h1
+            class="text-[1.2rem] text-[#777] bg-[#0001] dark:bg-[#fff1] py-4 px-5 w-fit font-bold rounded-xl dark:text-[#cdcdcd]"
+        >
+            Hola!<span class="hi">👋</span> Soy Daniel Gómez
+        </h1>
+        <p
+            class="text-[4rem] font-extrabold leading-[1] text-[#111] dark:text-[#f3f3f3]"
+        >
+            Desarrollador con pasión por construir sitios web <span
+                class="gradient-text">memorables</span
+            >.
+        </p>
+    </div>
 
-    <ul class="stats-list">
+    <ul class="flex items-center justify-center gap-10">
         <li class="stat">
             <span class="counter">
                 +2

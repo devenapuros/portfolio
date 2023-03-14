@@ -3,11 +3,15 @@ import Logo from "./logo.astro";
 import "../styles/footer.css";
 ---
 
-<footer class="footer">
-    <div class="logo-container">
+<footer
+    class="flex flex-col sm:flex-row py-8 mx-auto gap-6 border-t-[1px] border-[#0001] dark:border-[#ffffff15] sm:justify-between"
+>
+    <div
+        class="flex gap-4 font-bold text-light-texto-primary dark:text-dark-texto-primary"
+    >
         <Logo />Daniel Gómez
     </div>
-    <ul class="footer-list">
+    <ul class="flex flex-col sm:flex-row gap-8">
         <li><a class="footer-anchor" href="#home">Inicio</a></li>
         <li><a class="footer-anchor" href="#jobs">Experiencia</a></li>
         <li><a class="footer-anchor" href="#projects">Proyectos</a></li>

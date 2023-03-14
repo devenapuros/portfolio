@@ -3,7 +3,7 @@ const { title } = Astro.props;
 import "../styles/global-style.css";
 ---
 
-<html lang="es">
+<html lang="es" class="dark">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -44,8 +44,10 @@ import "../styles/global-style.css";
             );
             if (darkThemeMq.matches) {
                 document.body.classList.add("dark");
+                document.documentElement.classList.add("dark");
             } else {
                 document.body.classList.remove("dark");
+                document.documentElement.classList.remove("dark");
             }
         </script>
     </body>
