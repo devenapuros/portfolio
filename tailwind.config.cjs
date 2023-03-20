@@ -7,7 +7,7 @@ module.exports = {
                 light: {
                     fondo: {
                         primary: "#fafbfc",
-                        secondary: "#fafbfc",
+                        secondary: "#fff",
                     },
                     texto: {
                         primary: "#111",
@@ -17,7 +17,6 @@ module.exports = {
                         primary: "#6a6a6a",
                         secondary: "#bbb",
                     },
-                    primary: "#ffa200",
                 },
                 dark: {
                     fondo: {
@@ -26,15 +25,14 @@ module.exports = {
                     },
                     texto: {
                         primary: "#f3f3f3",
-                        secondary: "#cdcdcd",
+                        secondary: "#ccc",
                     },
                     gray: {
                         primary: "#999",
                         secondary: "#555",
                     },
-
-                    primary: "#ffb200",
                 },
+                primary: "#ffb200",
             },
         },
     },

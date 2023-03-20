@@ -1,37 +1,4 @@
-<style>
-    li {
-        display: flex;
-        align-items: center;
-        position: relative;
-        gap: 0.55rem;
-        border-radius: 11px;
-    }
-
-    .contact-data {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.15rem;
-    }
-
-    li small {
-        color: var(--gray);
-        font-weight: 500;
-    }
-
-    li a {
-        font-weight: 700;
-        color: var(--text);
-        font-size: 1.15rem;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-</style>
-<li class="link">
+<li class="flex items-center gap-2 overflow-hidden">
     <svg
         height="51"
         width="51"
@@ -100,9 +67,13 @@
             </g>
         </g><g id="Layer_1"></g>
     </svg>
-    <div class="contact-data">
-        <small>Mi cuenta de Instagram:</small>
+    <div class="flex flex-col justify-center">
+        <small
+            class="text-light-gray-primary dark:text-dark-gray-primary font-medium"
+            >Mi cuenta de Instagram:</small
+        >
         <a
+            class="font-bold text-light-texto-primary dark:text-dark-texto-primary text-[1.1rem] hover:cursor-pointer hover:underline"
             href="https://instagram.com/devenapuros"
             target="_blank"
             rel="noreferrer"

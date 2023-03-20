@@ -15,7 +15,7 @@ const {
 } = Astro.props;
 ---
 
-<article class="job-card">
+<article class="job-card relative flex flex-col pl-6 gap-4">
     <span class="circle"></span>
     <div class="job-picture">
         <img
@@ -24,23 +24,50 @@ const {
             loading="lazy"
         />
     </div>
-    <div class="job-data">
-        <div class="job-header">
-            <h1 class="job-title">{jobTitle}</h1>
-            <span class="job-company">{jobCompany}</span>
-            <span class="job-time">{jobTime}</span>
+    <div class="flex flex-col justify-center">
+        <div class="flex flex-col mb-4">
+            <h1
+                class="text-light-texto-primary dark:text-dark-texto-primary font-extrabold text-lg"
+            >
+                {jobTitle}
+            </h1>
+            <span
+                class="text-light-gray-primary dark:text-dark-gray-primary text-sm font-medium"
+                >{jobCompany}</span
+            >
+            <small
+                class="mt-1 text-light-gray-primary dark:text-dark-gray-primary italic font-medium"
+            >
+                {jobTime}
+            </small>
         </div>
-        <p class="description">{jobDescription}</p>
-        <div class="accordion" id={`accordion-${id}`}>
-            <div class="accordion-section">
-                <span class="accordion-title">Actividades</span>
-                <ul>
+        <p
+            class="text-[0.91rem] text-light-texto-secondary dark:text-dark-texto-secondary"
+        >
+            {jobDescription}
+        </p>
+        <div class="accordion gap-4" id={`accordion-${id}`}>
+            <div class="flex flex-col gap-2 mt-4">
+                <h2
+                    class="text-light-texto-primary dark:text-dark-texto-primary font-bold text-[0.91rem]"
+                >
+                    Actividades
+                </h2>
+                <ul
+                    class="ml-4 text-light-texto-secondary dark:text-dark-texto-secondary text-[0.91rem] list-outside list-disc"
+                >
                     {jobActivities.map((activity) => <li>{activity}</li>)}
                 </ul>
             </div>
-            <div class="accordion-section">
-                <span class="accordion-title">Tecnologías</span>
-                <ul class="tech-list">
+            <div class="flex flex-col gap-2 mb-1">
+                <h2
+                    class="text-light-texto-primary dark:text-dark-texto-primary font-bold text-[0.91rem]"
+                >
+                    Tecnologías
+                </h2>
+                <ul
+                    class="flex flex-wrap gap-x-4 gap-y-2 mb-0 text-light-texto-secondary dark:text-dark-texto-secondary"
+                >
                     {
                         jobTechnologies.map((technology) => (
                             <TechItem

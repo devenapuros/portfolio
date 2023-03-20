@@ -1,6 +1,4 @@
 ---
-import "../styles/education-card.css";
-
 const {
     id,
     educationPicture,
@@ -12,56 +10,71 @@ const {
 } = Astro.props;
 ---
 
-<!-- <span class="circle"></span> -->
-<article class="education-card">
-    <div class={"education-picture"}>
+<article class="flex gap-4">
+    <div
+        class="flex justify-center items-center bg-white object-contain rounded-2xl overflow-hidden aspect-square w-[90px] h-[90px] min-w-[90px] sm:w-[110px] sm:h-[110px] sm:min-w-[110px]"
+    >
         <img
+            class="w-full h-auto"
             src={`/education/${educationPicture}`}
             alt={`Picture of ${educationTitle} degree`}
             loading="lazy"
         />
     </div>
-    <div class="education-data">
-        <div class="data-section">
+    <div class="flex flex-col gap-3">
+        <div class="flex flex-col">
             {
                 educationType && (
-                    <small class="education-type">{educationType}</small>
+                    <small class="text-[0.77rem] text-light-gray-primary dark:text-dark-gray-primary">
+                        {educationType}
+                    </small>
                 )
             }
             {
                 educationLink ? (
                     <a
                         href={educationLink}
-                        class="education-link"
+                        class="text-light-texto-primary dark:text-dark-texto-primary font-bold leading-[1.1] hover:underline"
                         target="_blank"
                     >
                         <h1>
                             {educationTitle}
-                            {"  "}
                             <svg
+                                class="inline text-light-gray-primary dark:text-dark-gray-primary"
                                 xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
+                                width="14"
+                                height="14"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                height="15"
-                                width="15"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
                             >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </>
                             </svg>
                         </h1>
                     </a>
                 ) : (
-                    <h1 class="education-title">{educationTitle}</h1>
+                    <h1 class="text-light-texto-primary dark:text-dark-texto-primary font-bold leading-[1.1]">
+                        {educationTitle}
+                    </h1>
                 )
             }
         </div>
-        <div class="data-section">
-            <span class="education-time">{educationTime}</span>
-            <span class="education-company">{educationCompany}</span>
+        <div class="flex flex-col">
+            <span
+                class="text-[0.9rem] text-light-gray-primary dark:text-dark-gray-primary"
+                >{educationTime}</span
+            >
+            <span
+                class="text-[0.9rem] text-light-texto-secondary dark:text-dark-texto-secondary leading-[1.1]"
+                >{educationCompany}</span
+            >
         </div>
     </div>
 </article>

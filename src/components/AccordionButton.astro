@@ -2,72 +2,23 @@
 const { dataTarget } = Astro.props;
 ---
 
-<style>
-    /* Accordion button */
-
-    .accordion-btn {
-        padding: 0.5rem 0.65rem 0.55rem 0.5rem;
-        width: fit-content;
-        font-size: 13px;
-        border-radius: 8px;
-        gap: 0.35rem;
-        color: var(--text_2);
-        background-color: var(--hover);
-        transition: all 300ms ease;
-        aspect-ratio: none;
-    }
-
-    .accordion-btn span {
-        /* font-weight: 400; */
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-    }
-
-    .accordion-btn svg {
-        stroke: var(--text_2);
-        transition: all 100ms ease;
-    }
-
-    .accordion-btn:hover {
-        background-color: var(--text);
-        color: var(--background);
-    }
-
-    .accordion-btn:hover svg {
-        stroke: var(--background);
-    }
-
-    .accordion-btn.expanded svg {
-        transform: rotate(180deg);
-    }
-
-    .accordion-btn .see-less {
-        display: none;
-    }
-
-    .accordion-btn.expanded .see-less {
-        display: flex;
-    }
-
-    .accordion-btn.expanded .see-more {
-        display: none;
-    }
-</style>
-<button class="btn accordion-btn" data-target={`accordion-${dataTarget}`}>
+<button
+    class="accordion-button group mt-4 w-fit justify-center p-3 pr-4 flex items-center gap-1 sm:gap-2 font-semibold text-sm text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
+    data-target={`accordion-${dataTarget}`}
+>
     <svg
+        class="group-[.expanded]:rotate-180 transition-transform"
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        height="21"
         width="21"
+        height="21"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><polyline points="6 9 12 15 18 9"></polyline></svg
     >
-        <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-    </svg>
-    <span class="see-more">Ver más</span>
-    <span class="see-less">Ver menos</span>
+    <span class="flex group-[.expanded]:hidden">Ver más</span>
+    <span class="hidden group-[.expanded]:flex">Ver menos</span>
 </button>

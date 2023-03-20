@@ -1,55 +1,24 @@
-<style>
-    li {
-        display: flex;
-        align-items: center;
-        position: relative;
-        gap: 0.5rem;
-        border-radius: 11px;
-        overflow: hidden;
-    }
-
-    .contact-data {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.15rem;
-    }
-
-    li small {
-        color: var(--gray);
-        font-weight: 500;
-    }
-
-    li a {
-        font-weight: 700;
-        color: var(--text);
-        font-size: 1.15rem;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-</style>
-<li class="link">
+<li class="flex items-center gap-2 overflow-hidden">
     <svg
+        class="h-auto w-[53px] min-w-[53px] text-primary"
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
         viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
         stroke-width="2"
-        stroke="#ffa200"
-        height="60"
-        width="60"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><rect x="2" y="4" width="20" height="16" rx="2"></rect><path
+            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
     >
-        <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-        ></path>
-    </svg>
-    <div class="contact-data">
-        <small>Enviame un email:</small>
-        <a href="mailto:devenapuros@gmail.com">devenapuros@gmail.com</a>
+    <div class="flex flex-col justify-center">
+        <small
+            class="text-light-gray-primary dark:text-dark-gray-primary font-medium"
+            >Envíame un email:</small
+        >
+        <a
+            class="font-bold text-light-texto-primary dark:text-dark-texto-primary text-[1.1rem] hover:cursor-pointer hover:underline"
+            href="mailto:devenapuros@gmail.com">devenapuros@gmail.com</a
+        >
     </div>
 </li>

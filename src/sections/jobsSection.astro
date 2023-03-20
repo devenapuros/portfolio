@@ -4,15 +4,19 @@ import jobs from "../data/jobs.json";
 import "../styles/jobs-section.css";
 ---
 
-<section class="jobs-section" id="jobs">
-    <h1>Experiencia<span class="primary-text">.</span></h1>
+<section class="flex flex-col pt-16 pb-20 gap-16" id="jobs">
+    <h1
+        class="font-extrabold text-light-texto-primary dark:text-dark-texto-primary text-3xl sm:text-4xl"
+    >
+        Experiencia<span class="text-primary">.</span>
+    </h1>
     <div class="jobs-grid">
         {jobs.map((job) => <JobCard {...job} />)}
         <div class="timeline"></div>
     </div>
 </section>
 <script>
-    const $accordionButtons = document.querySelectorAll(".accordion-btn");
+    const $accordionButtons = document.querySelectorAll(".accordion-button");
     $accordionButtons.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             const accordionId = event.currentTarget.getAttribute("data-target");

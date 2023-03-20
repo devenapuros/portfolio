@@ -2,12 +2,21 @@
 import ProjectCard from "../components/ProjectCard.astro";
 import ProjectModal from "../components/ProjectModal.astro";
 import projects from "../data/projects.json";
-import "../styles/projects-section.css";
 ---
 
-<section class="projects-section" id="projects">
-    <h1>Proyectos<span class="primary-text">.</span></h1>
-    <div class="projects-grid">
+<style></style>
+<section
+    class="projects-section flex pt-16 pb-20 flex-col gap-12"
+    id="projects"
+>
+    <h1
+        class="font-extrabold text-light-texto-primary dark:text-dark-texto-primary text-3xl sm:text-4xl"
+    >
+        Proyectos<span class="text-primary">.</span>
+    </h1>
+    <div
+        class="grid grid-cols-1 gap-x-7 gap-y-12 sm:grid-cols-2 md:gap-x-12 md:gap-y-12 sm:gap-x-6 sm:gap-y-12"
+    >
         {projects.map((project) => <ProjectCard {...project} />)}
     </div>
 </section>
@@ -19,7 +28,7 @@ import "../styles/projects-section.css";
         btn.addEventListener("click", (event) => {
             const modalId = event.currentTarget.getAttribute("data-target");
             const $modal = document.getElementById(modalId);
-            $modal.classList.add("visible");
+            $modal.setAttribute("data-visible", "true");
             document.body.style.overflow = "hidden";
         });
     });
@@ -28,7 +37,7 @@ import "../styles/projects-section.css";
         btn.addEventListener("click", (event) => {
             const modalId = event.currentTarget.getAttribute("data-target");
             const $modal = document.getElementById(modalId);
-            $modal.classList.remove("visible");
+            $modal.setAttribute("data-visible", "false");
             document.body.style.overflow = "auto";
         });
     });

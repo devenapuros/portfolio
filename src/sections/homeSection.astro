@@ -3,28 +3,29 @@ import "../styles/home-section.css";
 ---
 
 <section class="home-section" id="home">
-    <div class="flex flex-col gap-9 text-center items-center justify-center">
+    <div class="flex flex-col gap-7 text-center items-center justify-center">
         <h1
-            class="text-[1rem] sm:text-[1.15rem] text-[#777] py-4 px-5 w-fit font-bold rounded-xl dark:text-[#cdcdcd]"
+            class="text-[1.3rem] sm:text-[1.6rem] text-light-gray-primary py-4 px-5 w-fit font-extrabold rounded-xl dark:text-dark-gray-primary"
         >
             Hola!<span class="hi">👋</span> Soy Daniel Gómez
         </h1>
         <p
-            class="text-[2.4rem] sm:text-[3.1rem] md:text-[4rem] font-extrabold leading-[1] text-[#111] dark:text-[#f3f3f3]"
+            class="hidden text-[2.4rem] sm:text-[3.1rem] md:text-[4rem] font-black leading-[1] text-[#111] dark:text-[#f3f3f3]"
+            id="slogan0"
         >
             Desarrollador con pasión por construir sitios web <span
-                class="gradient-text">memorables</span
+                class="text-primary">memorables</span
             >.
         </p>
-        <!-- <p
-            class="text-[2.4rem] sm:text-[3.1rem] md:text-[4rem] font-extrabold leading-[1] text-[#111] dark:text-[#f3f3f3]"
+        <p
+            class="hidden text-[2.4rem] sm:text-[3.1rem] md:text-[3.7rem] font-black leading-[1] text-[#111] dark:text-[#f3f3f3]"
+            id="slogan1"
         >
             Desarrollador con la misión de transformar interfaces en <span
-                class="gradient-text">experiencias</span
+                class="text-primary">experiencias</span
             >.
-        </p> -->
+        </p>
     </div>
-
     <ul
         class="gap-3 flex items-center justify-center sm:gap-9 text-light-gray-primary dark:text-dark-gray-primary"
     >
@@ -69,20 +70,20 @@ import "../styles/home-section.css";
             >
         </li>
     </ul>
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-2 sm:gap-6">
         <a
             href="/DanielGomez_CV.pdf"
             target="_blank"
-            class="w-48 flex items-center justify-center text-[0.91rem] rounded-xl p-4 font-medium gap-2 text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors"
+            class="sm:w-40 justify-center p-3 pr-4 flex items-center gap-1 sm:gap-2 font-semibold text-[0.91rem] text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="22"
+                height="22"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
+                stroke-width="1.8"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 ><path
@@ -94,26 +95,34 @@ import "../styles/home-section.css";
                     y2="13"></line><line x1="16" y1="17" x2="8" y2="17"
                 ></line><line x1="10" y1="9" x2="8" y2="9"></line></svg
             >
-            <span>Descargar CV</span>
+            <span>Currículum</span>
         </a>
+
         <a
             href="#contact"
-            class="w-48 flex items-center justify-center text-[0.91rem] rounded-xl p-4 font-medium gap-2 text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors"
+            class="sm:w-40 justify-center p-3 pr-4 flex items-center gap-1 sm:gap-2 font-semibold text-[0.91rem] text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="23"
+                height="23"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
+                stroke-width="1.8"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 ><line x1="7" y1="17" x2="17" y2="7"></line><polyline
                     points="7 7 17 7 17 17"></polyline></svg
             >
-            Contactar ahora
+            Contacto
         </a>
     </div>
 </section>
+<script>
+    let sloganSeed = Math.round(Math.random());
+    console.log(`slogan${sloganSeed}`);
+    let sloganParagraph = document.getElementById(`slogan${sloganSeed}`);
+    sloganParagraph.classList.remove("hidden");
+    sloganParagraph.classList.add("inline");
+</script>
