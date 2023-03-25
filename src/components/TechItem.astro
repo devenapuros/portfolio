@@ -2,19 +2,12 @@
 const { name, icon } = Astro.props;
 ---
 
-<style>
-    li {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-        font-size: 0.85rem;
-    }
-    li img {
-        height: 16px;
-        width: auto;
-    }
-</style>
-<li>
-    <img src={`/icons/${icon}.svg`} alt={name} loading="lazy" />
+<li class="flex items-center gap-1 text-sm">
+    <img
+        class="h-4 w-auto"
+        src={`/icons/${icon}.svg`}
+        alt={name}
+        loading="lazy"
+    />
     {name}
 </li>

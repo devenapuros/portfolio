@@ -34,6 +34,12 @@ module.exports = {
                 },
                 primary: "#ffb200",
             },
+            gridTemplateColumns: {
+                modal: "auto 23rem",
+            },
+            maxHeight: {
+                "accordion-expanded": "500px",
+            },
         },
     },
     darkMode: "class",

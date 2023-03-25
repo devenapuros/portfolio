@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/carousel.css";
 
 export const Carousel = ({ images, path = "" }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,15 +37,22 @@ export const Carousel = ({ images, path = "" }) => {
     };
 
     return (
-        <div className="carousel-container" ref={containerRef}>
-            <ul className="carousel-viewport" ref={carouselRef}>
+        <div
+            className="relative flex justify-center items-center w-full bg-black overflow-hidden"
+            ref={containerRef}
+        >
+            <ul
+                className="carousel-viewport flex gap-0 h-fit scroll-smooth snap-x snap-mandatory overflow-x-scroll overflow-y-hidden transition-all duration-200"
+                ref={carouselRef}
+            >
                 {images.map((image, index) => (
                     <li
-                        className="carousel-slide"
+                        className="flex-shrink-0 flex-grow-0 snap-start snap-always gap-0 w-full"
                         key={image}
                         data-index={index}
                     >
                         <img
+                            className="w-full h-full"
                             src={`/projects/${path}/${image}`}
                             alt=""
                             loading="lazy"
@@ -56,7 +62,7 @@ export const Carousel = ({ images, path = "" }) => {
             </ul>
             {currentSlide !== 0 && (
                 <button
-                    className="carousel-btn go-left"
+                    className="absolute hidden sm:flex justify-center items-center h-[26px] w-[26px] border-0 rounded-full text-light-texto-secondary bg-[#fffb] left-2 pr-[2px] hover:bg-[#fffe] transition-colors"
                     onClick={() => changeSlide("left")}
                 >
                     <svg
@@ -64,7 +70,7 @@ export const Carousel = ({ images, path = "" }) => {
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth="2.5"
-                        stroke="#000c"
+                        stroke="currentColor"
                         height="16"
                         width="16"
                     >
@@ -78,7 +84,7 @@ export const Carousel = ({ images, path = "" }) => {
             )}
             {currentSlide !== images.length - 1 && (
                 <button
-                    className="carousel-btn go-right"
+                    className="absolute hidden sm:flex justify-center items-center h-[26px] w-[26px] border-0 rounded-full text-light-texto-secondary bg-[#fffb] right-2 hover:bg-[#fffe] transition-colors"
                     onClick={() => changeSlide("right")}
                 >
                     <svg
@@ -86,7 +92,7 @@ export const Carousel = ({ images, path = "" }) => {
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth="2.5"
-                        stroke="#000c"
+                        stroke="currentColor"
                         height="16"
                         width="16"
                     >
@@ -98,7 +104,7 @@ export const Carousel = ({ images, path = "" }) => {
                     </svg>
                 </button>
             )}
-            <span className="carousel-indicator">
+            <span className="absolute right-2 bottom-2 py-1 px-2 bg-[#fffb] rounded-md text-light-texto-secondary text-[0.75rem] font-bold">
                 {currentSlide + 1} / {images.length}
             </span>
         </div>

@@ -1,6 +1,5 @@
 ---
 import TechItem from "./TechItem.astro";
-import "../styles/project-modal.css";
 import { Carousel } from "./Carousel.jsx";
 
 const {
@@ -16,12 +15,14 @@ const {
 
 <div
     data-visible="false"
-    class="modal fixed hidden data-[visible=true]:flex justify-center top-0 left-0 w-screen h-full bg-[#0008] z-10 backdrop-blur-sm overflow-y-scroll"
+    class="modal fixed hidden data-[visible=true]:flex justify-center top-0 left-0 w-screen h-full bg-[#0008] z-10 backdrop-blur-sm overflow-y-scroll lg:items-center"
     id={`modal-${id}`}
 >
-    <div class="modal-card">
+    <div
+        class="my-1 relative bg-light-fondo-primary dark:bg-dark-fondo-primary flex flex-col h-fit w-[95%] max-w-[600px] rounded-xl overflow-hidden lg:grid lg:grid-cols-modal lg:max-h-[1024px] lg:max-w-[85%]"
+    >
         <Carousel client:visible images={carouselImages} path={id} />
-        <article class="modal-data-container">
+        <article class="flex flex-col p-6 gap-8 lg:py-0 lg:mt-12 lg:mb-8">
             <h1
                 class="font-extrabold text-light-texto-primary dark:text-dark-texto-primary text-2xl sm:text-3xl"
             >

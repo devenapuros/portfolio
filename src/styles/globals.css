@@ -63,31 +63,10 @@ body.dark {
     transform-origin: 70% 70%;
 }
 
-/* MAIN */
-
-.main-container {
-    width: 90vw;
-    margin: 0 auto;
-}
-
-/* MEDIA QUERIES */
-
-@media screen and (min-width: 600px) {
-    .main-container {
-        width: 93vw;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    main-container {
-        width: 90vw;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .main-container {
-        width: 822px;
-    }
+.gradient {
+    background: var(--primary);
+    background: -webkit-linear-gradient(to bottom, var(--primary), #fdc830);
+    background: linear-gradient(to bottom, var(--primary), #fdc830);
 }
 
 @media (prefers-reduced-motion) {
@@ -98,4 +77,12 @@ body.dark {
     :root {
         scroll-behavior: auto;
     }
+}
+
+.carousel-viewport {
+    scrollbar-width: none;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none;
 }
