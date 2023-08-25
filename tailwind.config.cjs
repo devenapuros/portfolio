@@ -10,7 +10,7 @@ module.exports = {
                         secondary: "#fff",
                     },
                     texto: {
-                        primary: "#111",
+                        primary: "#191919",
                         secondary: "#252525",
                     },
                     gray: {
@@ -20,8 +20,8 @@ module.exports = {
                 },
                 dark: {
                     fondo: {
-                        primary: "#0a0a0a",
-                        secondary: "#181818",
+                        primary: "#121212",
+                        secondary: "#1a1a1a",
                     },
                     texto: {
                         primary: "#f3f3f3",

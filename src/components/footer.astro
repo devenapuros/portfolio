@@ -1,13 +1,13 @@
 ---
 import Logo from "./logo.astro";
-const thumbnail = "/music/mojo.jpg";
-const artist = "Mojo Myst";
-const song = "Lo que dijimos";
+const thumbnail = "/music/inperfecto_extrano.jpg";
+const artist = "Enjambre";
+const song = "Tercer tipo";
 const link = "https://www.youtube.com/watch?v=oAk227xfIVM";
 ---
 
 <footer
-    class="flex flex-col border-t-[1px] border-[#0001] dark:border-[#ffffff15] py-10 gap-12"
+    class="flex flex-col border-t-[1px] border-[#0001] dark:border-[#ffffff15] py-10 gap-14"
 >
     <section
         class="flex flex-col sm:flex-row sm:items-center gap-8 sm:justify-between"
@@ -59,28 +59,30 @@ const link = "https://www.youtube.com/watch?v=oAk227xfIVM";
                 class="text-light-gray-primary dark:text-dark-gray-primary text-[0.75rem]"
                 >Descubrimiento musical semanal:</small
             >
-            <div class="flex items-center gap-3">
+            <a
+                class="flex items-center gap-3 p-1 hover:bg-[#0001] dark:hover:bg-[#fff1] rounded-2xl"
+                href={link}
+                target="_blank"
+            >
                 <img
                     src={thumbnail}
                     alt={`Song thumbnail of the song ${song} by ${artist}`}
-                    class="flex items-center justify-center text-[0.7rem] text-center h-11 w-11 bg-light-gray-secondary dark:bg-dark-gray-secondary rounded-md"
+                    class="flex items-center justify-center text-[0.7rem] text-center h-20 w-20 sm:w-12 sm:h-12 bg-light-gray-secondary dark:bg-dark-gray-secondary rounded-xl"
                     loading="lazy"
                 />
                 <div class="flex flex-col">
-                    <a
-                        href={link}
-                        target="_blank"
-                        class="text-light-texto-primary dark:text-dark-texto-primary font-extrabold text-[0.91rem] -mb-1 hover:underline"
+                    <p
+                        class="text-light-texto-primary dark:text-dark-texto-primary font-extrabold -mb-1"
                     >
                         {song}
-                    </a>
+                    </p>
 
                     <span
                         class="text-light-gray-primary dark:text-dark-gray-primary text-[0.81rem]"
                         >{artist}</span
                     >
                 </div>
-            </div>
+            </a>
         </div>
         <small
             class="text-light-gray-primary dark:text-dark-gray-primary text-[0.75rem] max-w-md sm:text-end"
