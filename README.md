@@ -8,7 +8,7 @@
 <p align="center">
     My personal portfolio built with Astro.
     <br />
-    <a href="https://danieldev.tech">Go to website</a>&nbsp;
+    <a href="https://danielgomez.dev">Go to website</a>&nbsp;
     ·
     &nbsp;<a href="https://github.com/devenapuros/portfolio/issues">Report Bug</a>
   </p>
